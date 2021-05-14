@@ -6,6 +6,7 @@ public class Exercise1 {
 	// Hàm kiểm tra số lũy thừa
 	public static boolean Check(int soLuyThua) {
 		int temp = soLuyThua;
+		if(soLuyThua==0||soLuyThua==1)return false;
 		for (int i = 1; i < soLuyThua; i++) {
 			if (temp % 2 != 0)
 				return false;
