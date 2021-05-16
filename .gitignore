@@ -5,14 +5,17 @@
 *.project
 *.classpath
 *.settings
+tmp
+.idea
+java12-repository.iml
 
 # Ignore .gitignore in project
-*/.gitignore
+
 
 # Compiled class file
 */bin/
 *.class
-
+rf
 # Log file
 *.log
 
