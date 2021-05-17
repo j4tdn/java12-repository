@@ -18,15 +18,15 @@ public class Ex04 {
 		Integer oaa = new Integer(20);
 		Integer obb = new Integer(20);
 		Integer occ = new Integer(40);
-		
-		hash("oa: ",oa);
-		hash("ob: ",ob);
-		hash("oc: ",oc);
-		hash("od: ",od);
-		hash("oa1: ",oa1);
-		hash("oa2: ",oa2);
-		hash("oaa: ",oaa);
-		
+		//Array
+//		hash("oa: ",oa);
+//		hash("ob: ",ob);
+//		hash("oc: ",oc);
+//		hash("od: ",od);
+//		hash("oa1: ",oa1);
+//		hash("oa2: ",oa2);
+//		hash("oaa: ",oaa);
+		System.out.println(Character.isDigit('a'));
 
 	}
 	
