@@ -8,6 +8,7 @@
 tmp
 .idea
 java12-repository.iml
+java12.iml
 
 # Ignore .gitignore in project
 
