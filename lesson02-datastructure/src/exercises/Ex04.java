@@ -37,7 +37,7 @@ public class Ex04 {
 
         System.out.println("\n========== login Succefull !!==============");
         System.out.println("Username " + username);
-        System.out.println("PassWord" + passwork);
+        System.out.println("Username " + passwork);
         System.out.println(" NOE " + noe);
     }
 
