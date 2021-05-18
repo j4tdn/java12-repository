@@ -25,8 +25,8 @@ public class Ex02 {
 			sleep(10);
 
 			System.out.print(password + " ");
-			if (noe % 13 == 0) {
-				System.out.println();
+			if (noe % 13 == 0) {         //chạy đủ 13 pass word thì xuống dòng
+				System.out.println();                
 			}
 			noe++;
 		} while (!LogIn(username, password));
