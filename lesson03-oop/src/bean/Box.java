@@ -13,6 +13,9 @@ public class Box {
 // Attributes
 	private int width;
 	private int height;
+	public Box() {
+		
+	}
 	public Box(int width, int height) {
 		super();
 		this.width = width;
