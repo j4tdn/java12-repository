@@ -32,14 +32,7 @@ public class Vehicle {
 	}
 
 
-	private void countTax() {
-		if (dungTich < 100)
-			this.tax = (gia * 0.01);
-		if (dungTich < 200)
-			this.tax = (gia * 0.03);
-		else
-			this.tax = (gia * 0.05);
-	}
+	
 	
 	public void setTax() {
 		if(dungTich<100)
