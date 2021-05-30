@@ -24,7 +24,7 @@ public class App {
 		
 		System.out.println("order 1: "+ OrderUtils.export(o1));
 		System.out.println("order 2: "+ OrderUtils.export(o2));
-		System.out.println("order 3: "+ OrderUtils.export(o3));
+		System.out.println("order 3: "+ OrderUtils.export(o3)); 
 		
 	}
 }

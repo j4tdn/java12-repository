@@ -33,5 +33,22 @@ public class OrderUtils {
 			
 		}
 		return totolOfMoney;
+	}	
+	public static void main(String[] args) {
+		int a =5;int b=10;
+		OrderUtils ou = new OrderUtils();
+		System.out.println("result: "+ ou.calculate(a, b));
+	}
+	private int calculate(int a, int b)
+	{
+		return sum(a,b);
+	}
+	private static int sum(int a, int b)
+	{
+	return	a+b;
+	}
+	private static int sub(int a, int b)
+	{
+	return	a-b;
 	}
 }
