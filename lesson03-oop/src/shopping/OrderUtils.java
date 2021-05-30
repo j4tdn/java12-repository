@@ -32,4 +32,33 @@ public class OrderUtils {
 		System.out.println("=> Tong tien khach hang " + customer.getName() + " phai tra la: " + totalOfMoney);
 		System.out.println("\n              ====================\n");
 	}
+	
+	//      static: initial(allocate memory) at class loading time
+	// none-static: initial(allocate memory) at object loading time
+	// static >> non-static
+	// can't use function none-static inside function static
+	// static - CALL - static: YES
+	// non    - CALL - non   : YES
+	// static - CALL - none  : NO 
+	// non    - CALL - static: YES
+	public static void main(String[] args) {
+		int a = 5;
+		int b = 10;
+		
+		OrderUtils ou = new OrderUtils();
+		System.out.println("result: " + ou.calculate(a, b));
+	}
+	
+	private int calculate(int a, int b) {
+		return sum(a, b);
+	}
+	
+	private static int sum(int a, int b) {
+//		sub(a, b);
+		return a + b;
+	}
+	
+	private int sub(int a, int b) {
+		return a - b;
+	}
 }
