@@ -32,4 +32,14 @@ public class OderUtils {
 
 		return totalofMoney;
 	}
+	/**
+	 * static luôn được khởi tạo ở bộ nhớ heap khi chạy 1 class
+	 * non chỉ khởi tạo khi tạo 1 đối tượng của lớp
+	 * 
+	 * static and non static
+	 * static call static: YES
+	 * non call non: YES
+	 * static call non: NO => khởi tạo đối tượng sau đó mới gọi được
+	 * non call static: YESS
+	 */
 }
