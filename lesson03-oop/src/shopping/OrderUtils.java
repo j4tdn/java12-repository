@@ -27,4 +27,28 @@ public class OrderUtils {
 		}
 		return totalOfMoney;
 	}
+	//static : initial(allocate memory) at class loading time
+	//non-static: initial(allocate memory) at object loading time
+	
+	//static --call - static yes
+	//non -call - non yes
+	//static - call -non no
+	//non -call - static yes
+	//non                   :call from object
+	public static void main(String[] args) {
+		int a=5;
+		int b=10;
+		OrderUtils ou=new OrderUtils();
+		System.out.println("Result: "+ou.calculate(a,b));
+	} 
+	private int calculate(int a,int b) {
+		
+		return sub(a,b);
+	}
+	private static int sum(int a,int b) {
+		return a+b;
+	}
+	private  int sub(int a,int b) {
+		return a-b;
+	}
 }
