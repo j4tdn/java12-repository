@@ -6,6 +6,6 @@ public class Employee {
 		comp.id =123;
 		comp.name = "mgm";
 		comp.address ="Pasteur";
-		comp.fund
+		//comp.fund
 	}
 }
