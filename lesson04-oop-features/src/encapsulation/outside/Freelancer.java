@@ -11,8 +11,14 @@ public class Freelancer extends Developer {
 //		comp.address ="pasteur";
 //		comp.fun=123;
 		
-		Developer dv = new Developer();
-		//dv.getItSkills();
+		Freelancer dv = new Freelancer();
+		dv.getItSkills();
 	}
-
+	
+	@Override
+	protected String getItSkills() {
+		
+		return "JAVA,CSS, HTML" ;
+	}
+	
 }
