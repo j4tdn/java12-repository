@@ -1,7 +1,7 @@
 package exacapsulation.inside;
 
 public class Developer {
- protected String getItSkills() {
+public String getItSkills() {
 	return "JAVA, PHP, C++";
 }
 }

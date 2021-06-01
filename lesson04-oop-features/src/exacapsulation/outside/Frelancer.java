@@ -10,6 +10,16 @@ public class Frelancer extends Developer {
 		// comp.name="mgm";
         //	comp.address="pasteur";
        //	comp.fund=2000;
+		Frelancer fr=new Frelancer();
+		fr.getItSkills();
+	}
+//	@Override
+//	protected String getItSkills() {
+//		return "HTML,CSS,SQL";
+//	}
+	@Override
+	public String getItSkills() {
+		return "HTML,CSS,SQL";
 	}
 
 }

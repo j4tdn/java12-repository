@@ -7,7 +7,8 @@ public class DateTimeHelper {
   	private DateTimeHelper() {
 	}
   	public static DateTimeHelper getInstance() {
-  		if(instance==null)instance=new DateTimeHelper();
+  		if(instance==null)
+  			instance=new DateTimeHelper();
   		 return instance;
   	}
 
