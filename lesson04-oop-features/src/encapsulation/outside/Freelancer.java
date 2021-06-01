@@ -15,4 +15,9 @@ public class Freelancer extends Developer {
 		fr.getItSkills();
 		
 	}
+	
+	@Override
+	protected String getItSkills() {
+		return "HTML, CSS, SCSS, JS";
+	}
 }
