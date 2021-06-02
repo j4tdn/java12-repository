@@ -3,7 +3,7 @@ package ex02;
 import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) {1
 		VeHicles veh= new VeHicles();
 		Scanner ip = new Scanner(System.in);
 		int key;
@@ -15,10 +15,10 @@ public class Main {
 			key = ip.nextInt();
 			switch (key) {
 				case 1:
-					veh.insertInf();
+					VehicleUtils.insertInf(veh);
 					break;
 				case 2: {
-					veh.show();
+					VehicleUtils.export(veh);
 					break;						
 				}
 			}
