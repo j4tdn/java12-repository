@@ -14,4 +14,8 @@ public class Freelancer extends Developer{
 		Freelancer fr=new Freelancer();
 		fr.getItSkills();
 	}
+	@Override
+	protected String getItSkills() {
+		// TODO Auto-generated method stub
+		return "HTML,CSS,SQL";	}
 }
