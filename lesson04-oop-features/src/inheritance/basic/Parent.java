@@ -1,0 +1,12 @@
+package inheritance.basic;
+
+public class Parent {
+    int number;
+    void text() {
+    	System.out.print("Parent >> texting ....");
+    }
+    
+    void log(String message) {
+    	System.out.println("Parent >> "+message);
+    }
+}
