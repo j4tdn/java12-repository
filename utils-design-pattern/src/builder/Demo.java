@@ -1,7 +1,5 @@
 package builder;
 
-import builder.Person.Builder;
-
 public class Demo {
 	public static void main(String[] args) {
 		Person kate = Person.builder()

@@ -1,8 +1,6 @@
 package polymorphism.method;
 
-import static polymorphism.method.MathUtils.*;
-
-import encapsulation.inside.Developer;
+import static polymorphism.method.MathUtils.sum;
 
 public class Demo {
 	public static void main(String[] args) {

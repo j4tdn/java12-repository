@@ -17,7 +17,7 @@ public class ShapeFactory {
 			shape = new Square();
 			break;
 		case RECT:
-			shape = new Shape();
+			shape = new Rectangle();
 			break;
 		default:
 			shape = new Shape();
