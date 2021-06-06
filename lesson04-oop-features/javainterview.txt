@@ -1,0 +1,11 @@
+OOP-features 6.6.21
++ Đóng gói được thể hiện qua access modified : private mang phạm vi lớp
+	* vì sao các thuộc tính phải để private mà k để public ?
++ Đa hình có 2 loại overloading và overriding
++ Kế thừa
+	* abstract class là các method chỉ có head k có body{}
+	* nếu cha là 1 class thì k bắt buộc override lại các pthuc
+	* trong java không hỗ trợ đa kế thừa, 1 class chỉ extends 1 class, còn trong interface có thể implements nhiều interface chỉ thực thi phương thức, override lại không gọi là đa kế thừa.
+	* abstract class giống class ở chỗ chỉ extends được 1 class, nhưng trong đó có thể vừa có normal method hoặc abstract method, những abstract method bắt buộc phải override để thực thi, còn nếu là normal thì có thể có hoặc không.
+>> Từ Version8 thì interface cũng có thể chứa các default method, static method.
+>> cả trong abstract class hoặc interface đều có các hàm abtract method và nonabstract, nhưng khác nhau ở chỗ interface có thể implements nhiều interface khác, abstract class chỉ extends 1 class.
