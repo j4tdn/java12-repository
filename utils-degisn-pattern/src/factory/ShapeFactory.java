@@ -2,7 +2,7 @@ package factory;
 
 public class ShapeFactory {
 	enum ShapeType {
-		SQUARE, RECT
+		SQUARE, RECT;
 	}
 
 	private ShapeFactory() {
