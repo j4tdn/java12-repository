@@ -9,3 +9,13 @@ OOP-features 6.6.21
 	* abstract class giống class ở chỗ chỉ extends được 1 class, nhưng trong đó có thể vừa có normal method hoặc abstract method, những abstract method bắt buộc phải override để thực thi, còn nếu là normal thì có thể có hoặc không.
 >> Từ Version8 thì interface cũng có thể chứa các default method, static method.
 >> cả trong abstract class hoặc interface đều có các hàm abtract method và nonabstract, nhưng khác nhau ở chỗ interface có thể implements nhiều interface khác, abstract class chỉ extends 1 class.
+
+JAVA OOP 7.6.21
+* Trong java không hỗ trợ đa thừa kế nhưng trong java có hỗ trợ đa thực thi, có thể implements nhiều interface, từ java8 có hỗ trợ các hàm default có thể override lại từ 1 hoặc nhiều interface để thực thực thi, có thể tương đương với đa thừa kế. 
+
+* Gọi hàm static khi không quan tâm đối tượng, dù đối tượng nào gọi cũng trả về 1 kết quả.
+Nếu phụ thuộc vào đối tượng thì nonstatic.
+
+* abstract class có thể có hàm trừu tượng hoặc không, nhưng từ java8 interface bổ sung thêm hàm default và static : giảm số lượng code sinh ra,
+
+*Functional interface là interface chỉ có duy nhất 1 pthuc trừu tượng
