@@ -3,7 +3,7 @@ package shopping;
 import java.time.LocalDate;
 import java.time.Month;
 
-/*
+/**
  * Utility of Order class
  * Normally: Utility is  place where contains utility methods
  * Don't care created class's objects
