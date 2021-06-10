@@ -1,65 +1,42 @@
 package ex05;
 
 public class Book {
-    private String id;
-    private double price;
-    private String publisher;
-    private String status;
-    private double tax;
+    private String bookID;
+    private double bookPrice;
+    private String bookPublisher;
 
-    public Book(String id, double price, String publisher, String status) {
-        this(id, price, publisher, status, 0);
+    public Book(String bookID, double bookPrice, String bookPublisher) {
+        this.bookID = bookID;
+        this.bookPrice = bookPrice;
+        this.bookPublisher = bookPublisher;
     }
 
-    public Book(String id, double price, String publisher, double tax) {
-        this(id, price, publisher, null, tax);
+    public String getBookID() {
+        return bookID;
     }
 
-    public Book(String id, double price, String publisher, String status, double tax) {
-        this.id = id;
-        this.price = price;
-        this.publisher = publisher;
-        this.status = status;
-        this.tax = tax;
+    public void setBookID(String bookID) {
+        this.bookID = bookID;
     }
 
-    public String getId() {
-        return id;
+    public double getBookPrice() {
+        return bookPrice;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setBookPrice(double bookPrice) {
+        this.bookPrice = bookPrice;
     }
 
-    public double getPrice() {
-        return price;
+    public String getBookPublisher() {
+        return bookPublisher;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setBookPublisher(String bookPublisher) {
+        this.bookPublisher = bookPublisher;
     }
 
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public double getTax() {
-        return tax;
-    }
-
-    public void setTax(double tax) {
-        this.tax = tax;
+    @Override
+    public String toString() {
+        return "(" + bookID + ", " + bookPrice + ", " + bookPublisher + ")";
     }
 }
