@@ -41,9 +41,9 @@ public class DateTimeHelper {
 		}
 
 		
-		public static void setInstance(DateTimeHelper instance) {
-			DateTimeHelper.instance = instance;
-		}
+//		public static void setInstance(DateTimeHelper instance) {
+//			DateTimeHelper.instance = instance;
+//		}
 
 		public static DateTimeHelper instance = null;
 		
