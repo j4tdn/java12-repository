@@ -5,6 +5,14 @@ public class KhachHang {
 	private String hoTen;
 	private String soDienThoai;
 	private String diaChi;
+	
+	public KhachHang(String maKhachHang, String hoTen, String soDienThoai, String diaChi) {
+		this.maKhachHang = maKhachHang;
+		this.hoTen = hoTen;
+		this.soDienThoai = soDienThoai;
+		this.diaChi = diaChi;
+	}
+	
 	public String getMaKhachHang() {
 		return maKhachHang;
 	}

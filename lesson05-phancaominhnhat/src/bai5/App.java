@@ -5,6 +5,9 @@ public class App {
 		Sach[] sach = taoSach();
 		timSachNXBKimDong(sach);
 		timSachVoiDonGia(sach);
+		KhachHang pcmnhat = new KhachHang("KH01","Minh Nhat","0123456789","Quang Nam");
+		Order order1 = new Order(pcmnhat.getHoTen(), sach[2].getDonGia());
+		
 	}
 	
 	private static Sach[] taoSach() {
@@ -12,8 +15,8 @@ public class App {
 		Sach sachLy = new SachGiaoKhoa("SGK02",12000,"Nhi Dong",true);
 		Sach sachHoa = new SachGiaoKhoa("SGK03",11000,"Nhi Nhat",true);
 		
-		Sach sachTKToan = new SachThaoKhao("STK01", 12000, "Thieu Nhi", 10);
-		Sach sachTKLy = new SachThaoKhao("STK02", 13000, "Thieu Nhi", 11);  
+		Sach sachTKToan = new SachThaoKhao("STK01", 12000, "Thieu Nhi", 0.1);
+		Sach sachTKLy = new SachThaoKhao("STK02", 13000, "Thieu Nhi", 0.2);  
 		
 		Sach[] sach = {sachToan,sachLy, sachHoa,sachTKToan,sachTKLy};
 		return sach;
