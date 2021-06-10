@@ -1,6 +1,7 @@
 package ex05;
 
 public class TextBook extends Book {
+	
     private boolean status;
 
     public TextBook(String bookID, double bookPrice, String bookPublisher, boolean status) {

@@ -1,6 +1,7 @@
 package ex05;
 
 public class BookReceipt {
+	
     private Customer customer;
     private Book[] books;
 

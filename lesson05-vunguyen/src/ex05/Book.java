@@ -1,6 +1,7 @@
 package ex05;
 
 public class Book {
+	
     private String bookID;
     private double bookPrice;
     private String bookPublisher;

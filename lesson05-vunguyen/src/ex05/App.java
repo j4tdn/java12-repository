@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class App {
+	
     public static void main(String[] args) {
         Book[] books = createBooks();
         System.out.println(Arrays.toString(findBooksByPublisher(books)));
@@ -62,6 +63,7 @@ public class App {
         for (Book book: books) {
             if (book.getBookID().matches("^SGK.*")) {
                 money += book.getBookPrice() * 30 / 100;
+                
             }
             if (book.getBookID().matches("^STK,*")) {
                 money += book.getBookPrice() * (1 + ((ReferBook)book).getTax() / 100);
