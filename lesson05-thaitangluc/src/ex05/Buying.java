@@ -23,7 +23,7 @@ public class Buying {
 		this.customer = customer;
 	}
 
-	public Book getTextbook() {
+	public Textbook getTextbook() {
 		return textbook;
 	}
 
@@ -31,7 +31,7 @@ public class Buying {
 		this.textbook = textbook;
 	}
 
-	public Book getRefBook() {
+	public RefBook getRefBook() {
 		return refBook;
 	}
 

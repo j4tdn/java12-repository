@@ -36,9 +36,9 @@ public class AppUtils {
 	}
 	
 	public static double buyBook(Buying buy) {
-		double price = 0;
-		Textbook book1 = (Textbook) buy.getTextbook();
-		RefBook book2 = (RefBook) buy.getRefBook();
+		double price = 0; 
+		Textbook book1 =  buy.getTextbook();
+		RefBook book2 =  buy.getRefBook();
 		if(book1.getStatus()== "Cu") {
 			price = book1.getCost() * 0.7;
 		}
