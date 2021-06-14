@@ -1,58 +1,21 @@
 package ex05;
 
-public class RefBook extends Textbook{
-	private String idS;
-	private double cost;
-	private String author;
+public class RefBook extends Book {
 	private double tax;
-	
+
 	public RefBook() {
-		// TODO Auto-generated constructor stub
+
 	}
-	
-	public RefBook(String idS, double cost, String author, double tax) {
-		this.idS = idS;
-		this.cost = cost;
-		this.author = author;
+
+	public RefBook(String idB, double cost, String author, double tax) {
+		super(idB, cost, author);
 		this.tax = tax;
 	}
-
-
-
-	public double getCost() {
-		return cost;
-	}
-
-
-
-	public void setCost(double cost) {
-		this.cost = cost;
-	}
-
-
-
-	public String getAuthor() {
-		return author;
-	}
-
-
-
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-
 	
-	
-
-	public String getIdS() {
-		return idS;
+	public static RefBook setRefBook(String idB, double cost, String author, double tax) {
+		RefBook refbook = new RefBook(idB, cost, author, tax);
+		return refbook;
 	}
-
-
-	public void setIdS(String idS) {
-		this.idS = idS;
-	}
-
 
 	public double getTax() {
 		return tax;
@@ -61,6 +24,10 @@ public class RefBook extends Textbook{
 	public void setTax(double tax) {
 		this.tax = tax;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "ReferenceBook [id= "+ this.idB + ", cost=" + this.cost + ", author: "+ this.getAuthor()  + ", tax: "+ this.tax +  "]";
+	}
+
 }

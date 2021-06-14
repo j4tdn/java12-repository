@@ -9,6 +9,17 @@ public class Customer {
 	public Customer() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public Customer(int id, String name, int num, String add) {
+		this.id = id;
+		this.name = name;
+		this.num = num;
+		this.add = add;
+	}
+
+
 
 	public int getId() {
 		return id;

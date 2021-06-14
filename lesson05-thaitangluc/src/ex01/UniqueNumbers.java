@@ -13,7 +13,9 @@ public class UniqueNumbers {
 		sortArr(A);
 		int[] cnt = new int[105];
 		for (int x : A) {
+			System.out.println(x);
 			++cnt[x];
+			System.out.println(cnt[x]);
 		}
 		int m = 0;
 		for (int x : A) {
