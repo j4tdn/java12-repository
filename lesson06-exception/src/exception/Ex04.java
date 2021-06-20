@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Ex04 {
 	private static Scanner ip = new Scanner(System.in);
-//Nﾃｪﾌ「 code xaﾌ謁 ra ngoaﾌ｣i lﾃｪﾌ｣ => JVM neﾌ［ ra thﾃｴng tin ngoaﾌ｣i lﾃｪﾌ｣ trong console va kﾃｪﾌ》 thuﾌ… chﾆｰﾆ｡ng triﾌnh
+//Nﾃｪﾌ?u code xaﾌ謁 ra ngoaﾌ｣i lﾃｪﾌ｣ => JVM neﾌ?m ra thﾃｴng tin ngoaﾌ｣i lﾃｪﾌ｣ trong console va kﾃｪﾌ?t thuﾌ?c chﾆｰﾆ｡ng triﾌnh
 	
 	public static void main(String[] args) {
        System.out.println("Enter a: ");
