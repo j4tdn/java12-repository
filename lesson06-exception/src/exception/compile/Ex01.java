@@ -1,9 +1,9 @@
-package exception;
+package exception.compile;
 
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Ex03 {
+public class Ex01 {
 	
 	private static Scanner ip = new Scanner(System.in);
 	
@@ -13,20 +13,17 @@ public class Ex03 {
 	
 	public static void main(String[] args) {
 		// Enter your year of birth => Calculate your age
+		int age = -1;
 		
-		String ageText = "";
-		while(true) {
-			System.out.println("Enter your year of birth: ");
-			ageText = ip.nextLine();
-			// regular expression = REGEX
-			if (ageText.matches("\\d+")) {
+		while (true) {
+			try {
+				System.out.println("Enter your year of birth: ");
+				age = Integer.parseInt(ip.nextLine());
 				break;
-			}
-			System.out.println("--- Invalid Age ---");
+			} catch (NumberFormatException e) {
+				System.out.println("--- Invalid Age ---");
+			}			
 		}
-		
-		// Could cause potential Exception
-		int age = Integer.parseInt(ageText);
 		
 		int currentYear = LocalDate.now().getYear();		
 		System.out.println("Your age: " + (currentYear - age + 1));
