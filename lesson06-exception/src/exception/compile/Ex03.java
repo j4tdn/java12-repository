@@ -1,4 +1,4 @@
-package exception;
+package exception.compile;
 
 import java.time.LocalDate;
 import java.util.Scanner;
