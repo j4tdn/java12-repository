@@ -1,20 +1,24 @@
 package exception.compile;
 
-import java.time.LocalDate;
-import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
 
 public class Ex01 {
-	private static Scanner ip = new Scanner(System.in);
-	
-	//neu code xay ra ngai le --> JVM nem ra thong tin ngoai le
-	//InputMissmathException
-	//NumberFormatException
+	private static final String PATH = "database";
 	public static void main(String[] args) {
-		//enter your year of birth -> calc your age
-		System.out.println("Enter your year of birth: ");
-		int age = Integer.parseInt(ip.nextLine());
+		File file = new File(PATH);
 		
-		int currentYear = LocalDate.now().getYear();
-		System.out.println("your age: "+(currentYear - age +1));
+		boolean status = false;
+		if(!file.exists()) {
+			try {
+				status = file.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Status: "+ status);
 	}
+	
+
 }
