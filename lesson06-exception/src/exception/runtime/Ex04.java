@@ -1,6 +1,8 @@
-package exception;
+package exception.runtime;
 
 import java.util.Scanner;
+
+import exception.own.DivideByZeroException;
 
 public class Ex04 {
 	private static Scanner ip=new Scanner(System.in);
@@ -19,11 +21,13 @@ public class Ex04 {
 					System.out.println("Jump to catch");
 				}
 		}
+	
 	private static int div(int a, int b) {
-		// TODO Auto-generated method stub
 		if(a==0) {
 			System.out.println("Throw exception");
-			throw new ArithmeticException();
+			
+			//throw new ArithmeticException();
+			throw new DivideByZeroException();
 		}
 		return -b/a;
 	}

@@ -1,9 +1,10 @@
-package exception;
+package exception.runtime;
 
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Ex03 {
+public class Ex01 {
+	//Ko try catch
 	private static Scanner ip=new Scanner(System.in);
 	public static void main(String[] args) {
 		System.out.println("Enter your age");
