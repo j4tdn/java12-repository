@@ -1,4 +1,4 @@
-package exception.compile;
+package exception.runtime;
 
 public class Ex05 {
 	public static void main(String[] args) {

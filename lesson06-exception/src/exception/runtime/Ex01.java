@@ -1,25 +1,32 @@
 package exception.runtime;
 
-import java.io.File;
-import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Ex01 {
 	
-	private static final String PATH = "database.md";
+	private static Scanner ip = new Scanner(System.in);
 	
-	public static void main(String[] args) {		
-		File file = new File(PATH);
+	// InputMismatchException
+	// NumberFormatException
+	// Handle Exception
+	
+	public static void main(String[] args) {
+		// Enter your year of birth => Calculate your age
+		int age = -1;
 		
-		boolean status = false;
-		if (!file.exists()) {
+		while (true) {
 			try {
-				status = file.createNewFile();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+				System.out.println("Enter your year of birth: ");
+				age = Integer.parseInt(ip.nextLine());
+				break;
+			} catch (NumberFormatException e) {
+				System.out.println("--- Invalid Age ---");
+			}			
 		}
 		
-		System.out.println("Status: " + status);
+		int currentYear = LocalDate.now().getYear();		
+		System.out.println("Your age: " + (currentYear - age + 1));
+		System.out.println("Thread main end!");
 	}
 }
