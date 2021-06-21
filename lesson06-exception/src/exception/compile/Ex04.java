@@ -1,6 +1,8 @@
-package exception;
+package exception.compile;
 
 import java.util.Scanner;
+
+import exception.own.DivideByZeroException;
 
 public class Ex04 {
 	private static Scanner sc = new Scanner(System.in);
@@ -16,7 +18,7 @@ public class Ex04 {
 		try {
 		int x=div(a, b);
 		System.out.println("Result: "+ x);
-		} catch(ArithmeticException e) {
+		} catch(DivideByZeroException e) {
 			System.out.println("---Jump to catch---");
 		}
 		System.out.println("Thread main end!");
@@ -26,7 +28,8 @@ public class Ex04 {
 		//Root cause: a=0;
 		if( a==0) {
 			System.out.println("throw Exception");
-			throw new ArithmeticException();
+			//throw new ArithmeticException();
+			throw new DivideByZeroException();
 		}
 		System.out.println("-b/a");
 		return -b/a;
