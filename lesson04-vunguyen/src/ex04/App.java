@@ -49,35 +49,30 @@ public class App {
     }
 
     private static void employeesOutput() {
-        for (int i = 0; i < employees.size(); i++) {
-            if (directorIndexes.contains(i)) {
-                System.out.println(((Director) employees.get(i)).toString());
-            }
-            if (headOfDepartmentIndexes.contains(i)) {
-                System.out.println(((HeadOfDepartment) employees.get(i)).toString());
-            }
-            if (staffIndexes.contains(i)) {
-                System.out.println(((Staff) employees.get(i)).toString());
-            }
+        for (int i : directorIndexes) {
+            System.out.println(((Director) employees.get(i)).toString());
+        }
+        for (int i : headOfDepartmentIndexes) {
+            System.out.println(((HeadOfDepartment) employees.get(i)).toString());
+        }
+        for (int i : staffIndexes) {
+            System.out.println(((Staff) employees.get(i)).toString());
         }
     }
 
     private static void salaryOutput() {
         double salary = 0;
-        for (int i = 0; i < employees.size(); i++) {
-            if (directorIndexes.contains(i)) {
-                salary = (employees.get(i).getCoefficientsSalary() + ((Director) employees.get(i)).getJobCoefficient()) * 3000000;
-                System.out.println(employees.get(i).getName() + ": " + salary);
-            }
-            if (headOfDepartmentIndexes.contains(i)) {
-                salary = employees.get(i).getCoefficientsSalary() * 2200000;
-                System.out.println(employees.get(i).getName() + ": " + salary);
-
-            }
-            if (staffIndexes.contains(i)) {
-                salary = employees.get(i).getCoefficientsSalary() * 1250000;
-                System.out.println(employees.get(i).getName() + ": " + salary);
-            }
+        for (int i : directorIndexes) {
+            salary = (employees.get(i).getCoefficientsSalary() + ((Director) employees.get(i)).getJobCoefficient()) * 3000000;
+            System.out.println(employees.get(i).getName() + ": " + salary);
+        }
+        for (int i : headOfDepartmentIndexes) {
+            salary = employees.get(i).getCoefficientsSalary() * 2200000;
+            System.out.println(employees.get(i).getName() + ": " + salary);
+        }
+        for (int i : staffIndexes) {
+            salary = employees.get(i).getCoefficientsSalary() * 1250000;
+            System.out.println(employees.get(i).getName() + ": " + salary);
         }
     }
 }
