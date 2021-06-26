@@ -22,6 +22,7 @@ public class Ex02 {
 		int firstDayOfWeek = c.getFirstDayOfWeek();
 		System.out.println("firstDayOfWeed: "+firstDayOfWeek);
 		
+		Calendar.
 		c.add(Calendar.DAY_OF_MONTH, c.getFirstDayOfWeek()-c.get(Calendar.DAY_OF_WEEK));
 		System.out.println("date: "+df.format(c.getTime()));
 		c.set(Calendar.YEAR, 2020);
