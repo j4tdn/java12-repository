@@ -11,13 +11,21 @@ import java.util.Objects;
 public class DateUtils {
 	private static final String ddMMyyyy = "dd/MM/yyyy";
 	private static final GregorianCalendar gc = new GregorianCalendar();
+
 	private DateUtils() {
-		
+
 	}
+
+	public static Calendar getDateTime(int year, int month, int day, int hour, int minute, int second) {
+		Calendar c = Calendar.getInstance();
+		c.set(year, month, day,hour,minute,second);
+		return c;
+	}
+
 	public static boolean isLeapYear(int year) {
 		return gc.isLeapYear(year);
 	}
-	
+
 	/**
 	 * Convert calendar to formatted String with "ddMMyyyy" pattern
 	 * 
@@ -26,11 +34,11 @@ public class DateUtils {
 	 */
 	public static String format(Calendar c) {
 		Objects.requireNonNull(c);
-		
+
 		DateFormat df = new SimpleDateFormat(ddMMyyyy);
 		return df.format(c.getTime());
 	}
-	
+
 	/**
 	 * Convert string to date String with "ddMMyyyy" pattern
 	 * 
@@ -40,8 +48,8 @@ public class DateUtils {
 	public static Date to(String s) {
 		Objects.requireNonNull(s);
 		DateFormat df = new SimpleDateFormat(ddMMyyyy);
-		
-		Date date =null;
+
+		Date date = null;
 		try {
 			date = df.parse(s);
 		} catch (ParseException e) {
@@ -50,6 +58,7 @@ public class DateUtils {
 		}
 		return date;
 	}
+
 	/**
 	 * Convert date to calendar
 	 * 
@@ -59,7 +68,7 @@ public class DateUtils {
 	public static Calendar to(Date date) {
 		Objects.requireNonNull(date);
 		Calendar c = Calendar.getInstance();
-		
+
 		c.setTime(date);
 		return c;
 	}
