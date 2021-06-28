@@ -20,7 +20,7 @@ public class Ex03 {
 		System.out.println("================");
 		printWeekdays(c);
 //		 printDaysInMonth(c);
-		
+		// parse String
 		Date date = DateUtils.to("28/Feb/2020 07:07:24 PM Friday");
 		System.out.println("date:" + date);
 	}
