@@ -33,27 +33,40 @@ public class DateUtils {
 		return df.format(c.getTime());
 	}
 
-public static Date toDate(String s) {
-	Objects.requireNonNull(s);
-	DateFormat df=new SimpleDateFormat(PATTERN);
-	
-	Date date =null;
-	try {
-		date=df.parse(s);
-	}catch(ParseException e) {
-		e.printStackTrace();
+	public static Calendar getDateTime(int year, int month, int day, int hour, int minute, int second) {
+		Calendar c = Calendar.getInstance();
+		c.set(year, month, day, hour, minute, second);
+		return c;
 	}
-	return date;
-}
-/**
- * Convert date to calendar
- * 
- * @return
- */
-public static Calendar to(Date date) {
-	Objects.requireNonNull(date);
-	Calendar c=Calendar.getInstance();
-	c.setTime(date);
-	return c;
-}
+
+	public static Calendar getDate(int year, int month, int day) {
+		Calendar c = Calendar.getInstance();
+		c.set(year, month, day);
+		return c;
+	}
+
+	public static Date toDate(String s) {
+		Objects.requireNonNull(s);
+		DateFormat df = new SimpleDateFormat(PATTERN);
+
+		Date date = null;
+		try {
+			date = df.parse(s);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return date;
+	}
+
+	/**
+	 * Convert date to calendar
+	 * 
+	 * @return
+	 */
+	public static Calendar to(Date date) {
+		Objects.requireNonNull(date);
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		return c;
+	}
 }
