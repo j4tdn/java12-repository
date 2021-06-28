@@ -22,7 +22,7 @@ public class Ex04 {
 		Calendar end = Calendar.getInstance(); // 24.06.2021
 		end.set(year, month, start.getActualMaximum(Calendar.DAY_OF_MONTH)); // 31.03.2018
 		
-		for(Calendar date = start; date.before(end); date.add(Calendar.DAY_OF_MONTH, 1)) {
+		for(Calendar date = start; !date.after(end); date.add(Calendar.DAY_OF_MONTH, 1)) {
 			if(date.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
 				System.out.println(DateUtils.format(date));
 				count++;
