@@ -14,6 +14,11 @@ public class DateUtils {
 	private static final GregorianCalendar gc = new GregorianCalendar();
 	
 	private DateUtils() {}
+	public static Calendar getDateTime(int year, int month, int day, int hour, int minute, int second) {
+		Calendar c = Calendar.getInstance();
+		c.set(year, month, day,hour,minute, second);
+		return c;
+	}
 
 	public static boolean isLeapYear(int year) {
 		return gc.isLeapYear(year);
