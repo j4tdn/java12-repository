@@ -60,6 +60,7 @@ public class Ex04 {
         if (digitPosition == 0) {
             switch (digit) {
                 case 0:
+                	return "";
                 case 1:
                     if (oneExceptionFlag) {
                         return "mốt";
@@ -111,7 +112,6 @@ public class Ex04 {
         // hundred
         if (digitPosition == 2) {
             switch (digit) {
-                case 0:
                 case 1:
                     return "Một trăm";
                 case 2:
