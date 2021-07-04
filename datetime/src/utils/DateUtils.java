@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Objects;
+import java.util.TimeZone;
 
 public class DateUtils {
 	private static final String ddMMyyyy = "dd/MM/yyyy";
@@ -36,6 +37,20 @@ public class DateUtils {
 		Objects.requireNonNull(c);
 
 		DateFormat df = new SimpleDateFormat(ddMMyyyy);
+		return df.format(c.getTime());
+	}
+	
+	/**
+	 * Convert calendar to formatted String with "ddMMyyyy" pattern
+	 * 
+	 * @param c given calendar
+	 * @return format as string
+	 */
+	public static String format(Calendar c,TimeZone timezone) {
+		Objects.requireNonNull(c);
+
+		DateFormat df = new SimpleDateFormat(ddMMyyyy);
+		df.setTimeZone(timezone);
 		return df.format(c.getTime());
 	}
 
