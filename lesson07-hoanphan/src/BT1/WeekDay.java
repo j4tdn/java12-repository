@@ -1,0 +1,5 @@
+package BT1;
+
+public enum WeekDay {
+	SUNDAY,MONDAY,TUEDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY
+}
