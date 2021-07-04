@@ -8,8 +8,8 @@ import utils.DateUtils;
 public class Ex03 {
 	public static void main(String[] args) {
 		Calendar c = Calendar.getInstance();
-//		c.set(Calendar.MONTH, Calendar.FEBRUARY);
-//		c.set(Calendar.YEAR, 2020);
+		//c.set(Calendar.MONTH, Calendar.FEBRUARY);
+		//c.set(Calendar.YEAR, 2020);
 		
 		System.out.println("Số ngày trong năm: "+c.getActualMaximum(Calendar.DAY_OF_YEAR));   //getActualMaximum 
 		System.out.println("Số ngày trong tháng: "+c.getActualMaximum(Calendar.DAY_OF_MONTH));

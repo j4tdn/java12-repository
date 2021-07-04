@@ -14,7 +14,6 @@ public class Ex01 {
 		System.out.println("C: "+c);
 		
 		System.out.println("==================================");
-		
 		int day=c.get(Calendar.DAY_OF_MONTH);
 		//DayofMonth: 1,2,3,..29 
 		//DayOfweek: Monday,tuesday,...
@@ -29,7 +28,6 @@ public class Ex01 {
 		
 		System.out.println(+day+"/"+month+"/"+year);
 		System.out.println(hour+":"+minute+":"+second);
-		
 		System.out.println("==================================");
 		
 		String weekdays[]= {"Sun","Mon","Tues","Wed","Thurs","Friday","Sat"};

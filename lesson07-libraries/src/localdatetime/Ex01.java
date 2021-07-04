@@ -27,7 +27,7 @@ public class Ex01 {
 		
         //LocalDate parsed=LocalDate.parse("25/02/1998"); => sai
         //LocalDate parsed=LocalDate.parse("2020-02-25");
-    	LocalDate parsed=LocalDate.parse("22/02/1998",dtf);
+    	LocalDate parsed=LocalDate.parse("22/02/1998",dtf); //String to localDate
 		System.out.println("parsed: "+parsed);
 		
 		System.out.println("===========");

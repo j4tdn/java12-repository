@@ -7,6 +7,7 @@ import java.time.LocalTime;
 import java.time.Period;
 
 public class Ex03 {
+	//Tìm khoảng thời gian
 	public static void main(String[] args) {
 		LocalDateTime datetime = LocalDateTime.now();
 		LocalDateTime anotherDateime = LocalDateTime.of(2021, 7, 30, 16, 19, 19);
