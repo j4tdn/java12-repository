@@ -17,6 +17,10 @@ public class Ex01 {
         cal.set(year, Calendar.FEBRUARY, 1);
         while (cal.get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY) {
             cal.add(Calendar.DATE, 1);
+
+
+
+>>>>>>> 0bfa63a... Lesson07-exercises 01.7.2021
         }
 
         while (cal.get(Calendar.YEAR) == year) {
