@@ -12,6 +12,20 @@ public class Ex01 {
 		hash("l2", l2);
 		hash("l3", l3);
 		
+		// Immutable: Bất biến = Ko thể thay đổi giá trị
+		// Reality: Immutable for string value in heap
+		System.out.println("========= Immutalbe ==========");
+		
+		String i1 = "one"; // new String("one")
+		hash("i1", i1);
+		
+	
+		i1 = "welcome"; // new String("welcome")
+		hash("i1", i1);
+		System.out.println("i1: " + i1);
+		
+		System.out.println("==================");
+		
 		// object: heap(normal)
 		// deprecated
 		String o1 = new String("hello");
