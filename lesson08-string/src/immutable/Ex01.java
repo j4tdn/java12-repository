@@ -12,6 +12,16 @@ public class Ex01 {
 		hash("l2", l2);
 		hash("l3", l3);
 		
+		// Immutable: bất biến = can't change value
+		// Reality: Immutable for string value in heap
+		System.out.println("--------Immutable--------");
+
+		String i1 = "one";
+		hash("i1: ", i1);
+		i1 = "welcome";
+		hash("i1: ", i1);
+
+		
 		String o1 = new String("hello");
 		String o2 = new String("welcome");
 		String o3 = new String("hello");
