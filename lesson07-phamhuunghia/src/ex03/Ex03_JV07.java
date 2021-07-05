@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import utils.DateUtils;
 
-public class Ex03 {
+public class Ex03_JV07 {
 	private static final String PT_DATE = "dd/MM/yyyy";
 	private static String[] weekDays = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thurs", "Friday", "Saturday" };
 
