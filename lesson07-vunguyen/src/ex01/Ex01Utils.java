@@ -1,10 +1,8 @@
 package ex01;
 
-import java.util.Scanner;
+import utils.DateTimeUtils;
 
 public final class Ex01Utils {
-    public static Scanner scanner = new Scanner(System.in);
-
     private Ex01Utils() {
     }
 
@@ -17,7 +15,7 @@ public final class Ex01Utils {
                 System.out.println("2. No");
                 System.out.println("Chose: ");
                 // Don't catch NumberFormatException as NUmberFormatException is subclass of IllegalArgumentException
-                option = Integer.parseInt(scanner.nextLine());
+                option = Integer.parseInt(DateTimeUtils.scanner.nextLine());
                 if (option != 1 && option != 2) {
                     throw new IllegalArgumentException();
                 }

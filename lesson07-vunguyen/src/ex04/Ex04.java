@@ -24,11 +24,11 @@ public class Ex04 {
         int count = 0;
         while (count <= 110) {
             date = date.plusDays(1);
-            if (date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+            if (date.getDayOfWeek().equals(DayOfWeek.SUNDAY)) {
                 continue;
             }
-            if (date == tetStartDay) {
-                date.plusYears(1).withMonth(1).withDayOfMonth(5);
+            if (date.equals(tetStartDay)) {
+                date = date.plusYears(1).withMonth(1).withDayOfMonth(5);
                 continue;
             }
             count++;

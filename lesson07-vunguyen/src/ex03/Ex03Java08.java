@@ -113,7 +113,18 @@ public class Ex03Java08 {
     }
 
     private static void method6() {
-        LocalDate date = DateTimeUtils.inputDate("your birth");
+        LocalDate date = null;
+        while (true) {
+            try {
+                date = DateTimeUtils.inputLocalDate("your birth");
+                if (date.isAfter(LocalDate.now())) {
+                    throw new IllegalArgumentException();
+                }
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Your birthday can't exceed current date");
+            }
+        }
         Period period = Period.between(date, LocalDate.now());
         System.out.println("You have lived for "
                 + period.getYears() + " year(s), "

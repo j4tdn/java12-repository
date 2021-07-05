@@ -38,7 +38,7 @@ public class Ex01 {
     }
 
     private static LocalDateTime inputDateTime(String s) {
-        LocalDate date = DateTimeUtils.inputDate("start ");
+        LocalDate date = DateTimeUtils.inputLocalDate("start ");
         // Input time, if don't, create default time at midnight
         LocalTime time = null;
         int option = Ex01Utils.selectOption("Do you know specific time?");
@@ -46,7 +46,7 @@ public class Ex01 {
             while (true) {
                 try {
                     System.out.println("Input " + s + "time: ");
-                    String inputString = Ex01Utils.scanner.nextLine();
+                    String inputString = DateTimeUtils.scanner.nextLine();
                     time = LocalTime.parse(inputString);
                     break;
                 } catch (DateTimeParseException e) {

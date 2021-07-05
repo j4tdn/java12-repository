@@ -11,7 +11,8 @@ public class Ex02Java08 {
     private static final Locale locale = new Locale("en", "us");
 
     public static void main(String[] args) {
-        LocalDate date = DateTimeUtils.inputDate("");
+        LocalDate date = DateTimeUtils.inputLocalDate("");
+
         // count day
         String dayOfWeek = date.getDayOfWeek().getDisplayName(TextStyle.FULL, locale);
         int dayOfMonth = date.getDayOfMonth();
@@ -26,6 +27,7 @@ public class Ex02Java08 {
         int weekOfMonth = date.get(weekFields.weekOfMonth());
         int weekOfYear = date.get(weekFields.weekOfWeekBasedYear());
 
+        // count month
         String monthOfYear = date.getMonth().getDisplayName(TextStyle.FULL, locale);
 
         int year = date.getYear();
@@ -51,7 +53,7 @@ public class Ex02Java08 {
         LocalDate endDate = date.withDayOfMonth(date.lengthOfMonth());
         int count = 0;
         while (!startDate.isAfter(endDate)) {
-            if (startDate.getDayOfWeek() == date.getDayOfWeek()) {
+            if (startDate.getDayOfWeek().equals(date.getDayOfWeek())) {
                 count++;
                 if (startDate.getDayOfMonth() == date.getDayOfMonth()) {
                     weekdaysInMonth[0] = count;
@@ -72,7 +74,7 @@ public class Ex02Java08 {
         LocalDate endDate = date.withDayOfYear(date.lengthOfYear());
         int count = 0;
         while (!startDate.isAfter(endDate)) {
-            if (startDate.getDayOfWeek() == date.getDayOfWeek()) {
+            if (startDate.getDayOfWeek().equals(date.getDayOfWeek())) {
                 count++;
                 if (startDate.getDayOfYear() == date.getDayOfYear()) {
                     weekdaysInYear[0] = count;
