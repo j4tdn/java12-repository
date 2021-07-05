@@ -7,7 +7,7 @@ public class Ex01 {
 	public static void main(String[] args) {
 		
 		// NumberFormat always rounding (1.001d -> 2)
-		double digit = 12312435764562389.2768d;
+		double digit = 35764562389.2768;
 		System.out.println("digit: " + digit);
 		
 		Locale locale = new Locale("da", "DK");

@@ -12,6 +12,6 @@ public class Ex03 {
 		// HALF_UP is commercial round
 		digit = digit.setScale(2, RoundingMode.HALF_UP);
 		
-		System.out.println("rounding: " + digit);	
+		System.out.println("rounding: " + digit);		
 	}
 }
