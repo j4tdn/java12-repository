@@ -19,7 +19,7 @@ public class Ex04 {
 		System.out.println("Thread main end !");
 	}
 	
-	private static int div(int a, int b) {
+	private static int div(int a, int b) throws ArithmeticException{
 		if(a == 0) {
 			throw new ArithmeticException();
 		}
