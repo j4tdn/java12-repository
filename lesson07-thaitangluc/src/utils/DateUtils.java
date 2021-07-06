@@ -15,7 +15,7 @@ public class DateUtils {
 		LocalDate date = LocalDate.parse(s, dtf);
 		return date;
 	}
-
+	
 	public static LocalTime toTime(String s) {
 		Objects.requireNonNull(s);
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern(PTIME);
