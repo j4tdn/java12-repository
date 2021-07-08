@@ -14,6 +14,7 @@ public class Ex03 {
 		t1.start();
 		
 		t0.join();
+		t1.join();
 		
 		System.out.println("Mutable String length: " + task.length());
 	}
