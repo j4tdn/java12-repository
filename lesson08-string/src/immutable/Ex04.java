@@ -16,11 +16,10 @@ public class Ex04 {
 
 		s = s.replace("Grid", "Flow");
 		System.out.println("s: " + s);
-
 		String ss = "    Football      Cooking     Badminton";
 		String result = ss.trim().replaceAll("\\s+", " ");
 		System.out.println("result: " + result);
-
+		
 		String song = "d:/music/somthingyoulike.mp3";
 		int lastSlash = song.lastIndexOf("/");
 		int lastDot = song.lastIndexOf(".");
