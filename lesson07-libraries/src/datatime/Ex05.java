@@ -51,7 +51,6 @@ public class Ex05 {
 	
 	private static int nofWeekdays(int weekday, int fiveDays[]) {
 		for (int day: fiveDays) {
-			// System.out.println("fiveday: " + day);
 			if (weekday == day) {
 				return 5;
 			}
