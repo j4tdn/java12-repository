@@ -1,18 +1,20 @@
+
 package ex03;
 
 public class Ex03 {
     public static void main(String[] args) {
-        String input = "abc";
+        String input = "aa";
         System.out.println("output: ");
         permutation(input, "");
     }
-
-    private static char[] chars = new char[0];
 
     private static void permutation(String s, String result) {
         if (s.length() == 0) {
             System.out.println(result + " ");
         }
+
+        char[] chars = new char[0];
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             boolean flag = false;
