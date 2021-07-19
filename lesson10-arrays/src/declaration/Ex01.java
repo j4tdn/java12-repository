@@ -40,7 +40,7 @@ public class Ex01 {
 
 		System.out.println("items : "+items.getClass().getSimpleName());
 
-		
+		System.out.println(initNber());
 	}
 	private static int[] initNber() {
 		return new int[] {1,5,8};
