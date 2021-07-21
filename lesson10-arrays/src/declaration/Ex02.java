@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import bean.Condition;
 
-public class Ex02 implements Condition{
+public class Ex02 {
 	public static void main(String[] args) {
 		int[] digits = {1, 3, 6, 19, 22, 40};
 		printf(getElements(digits, d1 -> d1 % 2 == 0));
@@ -28,11 +28,4 @@ public class Ex02 implements Condition{
 		}
 		System.out.println();
 	}
-
-	@Override
-	public boolean test(int a) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 }
