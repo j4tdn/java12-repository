@@ -10,6 +10,12 @@ public final class ArraysUtils {
 		}
 	}
 	
+	public static void printf(Object[] objects) {
+		for (Object object: objects) {
+			System.out.println(object + " ");
+		}
+	}
+	
 	public static int[] add(int[] digits, int k, int newElement) {
 		int[] result = new int[digits.length + 1];
 		for (int i = 0; i < result.length; i++) {
