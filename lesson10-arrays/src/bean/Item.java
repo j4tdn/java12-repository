@@ -1,7 +1,12 @@
 package bean;
 
 public class Item {
-    public int getId() {
+    @Override
+	public String toString() {
+		return "Item [id=" + id + ", name=" + name + ", price=" + price + "]";
+	}
+
+	public int getId() {
 		return id;
 	}
 
@@ -39,7 +44,24 @@ public class Item {
 	public Item() {
 		
 	}
-	
+	//pre: this
+	//next: item
+	//postive(1) : swap
+	//negative(-1): unchange
+	public int compareTo(Item item) {
+		
+		if(getId() - item.getId() < 0) {
+			return 1;
+		}
+		if(getId() - item.getId() > 0) {
+			return -1;
+		}
+		if(getName().compareTo(item.getName()) < 0) {
+			return 1;
+		}
+		return 0;
+		
+	}
 	
 	
     
