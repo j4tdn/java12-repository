@@ -36,4 +36,17 @@ public String toString() {
 	return "Item [id=" + id + ", name=" + name + ", price=" + price + "]";
 }
 
+public int compareTo(Item item) {
+	if(getId()-item.getId()<0) {
+		return 1;
+	}
+	if(getId()-item.getId()>0) {
+		return -1;
+	}
+	if(getName().compareTo(item.getName())>0) {
+		return 1;
+	}
+	return 0;
+}
+
 }

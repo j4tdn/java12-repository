@@ -9,4 +9,14 @@ public class ArraysUtils {
 			System.out.print(digit+ " ");
 		}
 	}
+	public static void printf(String[] sequences) {
+		for(String sequence:sequences) {
+			System.out.print(sequence+ " ");
+		}
+	}
+	public static void printf(Object[] objects) {
+		for (Object object : objects) {
+			System.out.println(object);
+		}
+	}
 }
