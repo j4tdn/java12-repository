@@ -1,5 +1,7 @@
 package utils;
 
+import bean.Item;
+
 public class ArraysUtils {
     public ArraysUtils() {
     }
@@ -16,5 +18,16 @@ public class ArraysUtils {
             System.out.print(digit + " ");
         }
         System.out.println();
+    }
+    public static void printf(String[] elements) {
+        for(String element: elements) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+    public static void printf(Item[] items) {
+        for (Item item: items) {
+            System.out.println(item);
+        }
     }
 }
