@@ -8,7 +8,7 @@ public class Ex01 {
 
 		// ascending
 		for (int i = 0; i < numbers.length; i++) {
-			for (int j = 0; i < numbers.length - i - 1; i++) {
+			for (int j = 0; j < numbers.length - i - 1; i++) {
 				if (numbers[j] < numbers[j + 1]) {
 					int tmp = numbers[j];
 					numbers[j] = numbers[j+1];
