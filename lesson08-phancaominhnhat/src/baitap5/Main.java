@@ -8,33 +8,21 @@ public class Main {
 	public static void main(String[] args) {
 		String smallerString = s1.length() > s2.length() ? s2 : s1;
 		String biggerString = s1.length() > s2.length() ? s1 : s2;
-		
-		String[] arrCommon = new String[smallerString.length()/2];
-		int countElement = 0;
+		String[] arr = new String[s1.length()];
 		int count = 0;
-		for(int i = 0; i < smallerString.length() - 1; i++) {
-			int end = 0;
-			for(int j = 0; j < biggerString.length(); j++) {
-				System.out.println(i + " " + j);
-				if(smallerString.charAt(i) == biggerString.charAt(j)) {
-					count++;
-					i++;
-					end = j;
-					if(i == smallerString.length()) {
-						break;
-					}
-				}
-			}
-			if(count > 1) {
-				countElement++;
-				System.out.println(end);
-				System.out.println(count);
-				arrCommon[countElement] = biggerString.substring(end + 1 - count, end + 1);
+		int temp = 0;
+		for(int i = 0; i < smallerString.length(); i++) {
+			if(biggerString.contains(smallerString.substring(temp, i + 1))){
+				arr[count] = smallerString.substring(temp, i + 1);
+				continue;
+			} else {
+				count++;
+				temp = i + 1;
 			}
 		}
 		
-		for(int i = 0; i < arrCommon.length - 1; i++) {
-			System.out.println(arrCommon[i]);
+		for(int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
 		}
 	}
 }
