@@ -1,0 +1,13 @@
+package sorting;
+
+import bean.SortOrder;
+import static utils.ArraysUtils.*;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		int[] numbers = { 1, 5, 9, 4, 6, 11 };
+		
+		sort(numbers, SortOrder.DESC);
+		printf(numbers);
+	}
+}
