@@ -14,6 +14,8 @@ public class Ex07 {
 			public int compare(String left, String right) {
 				// left++ pivot
 				// right-- pivot
+				
+				// nullsFirst || nullsLast
 				if(left == null) {
 					return -1;
 				}
