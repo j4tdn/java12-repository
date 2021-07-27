@@ -5,6 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class AListVsLList {
+	//A sure win: get, update
+	//50/50 : A, L
+	
     private static int COUNT = 50000;
 
     public static void main(String[] args) {
