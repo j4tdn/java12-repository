@@ -9,7 +9,7 @@ public class Ex03 {
 	    // Constructs an empty list with an initial capacity of ten.
 		// this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA
 		// DEFAULT_CAPACITY = 10
-		List<String> elements = new ArrayList<>(8);
+		List<String> elements = new ArrayList<>();
 		
 		elements.add("Water");
 		elements.add("Bottle");

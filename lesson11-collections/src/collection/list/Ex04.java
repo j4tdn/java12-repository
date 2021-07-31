@@ -24,6 +24,7 @@ public class Ex04 {
 		
 		elements.removeIf(item -> Integer.parseInt("" + item.charAt(item.length()-1)) <= 3);
 		
+		
 		System.out.println("--------------------");
 		for(String element: elements) {
 			System.out.println(element);
