@@ -15,7 +15,12 @@ public class ArraysUtils {
 	public static void printf(String[] a) {
 		for (Object digit : a) {
 			System.out.println(digit + " ");
+		}
+	}
 
+	public static void printf(Object[] a) {
+		for (Object digit : a) {
+			System.out.println(digit + " ");
 		}
 	}
 }
