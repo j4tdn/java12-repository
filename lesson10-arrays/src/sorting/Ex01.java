@@ -1,7 +1,5 @@
 package sorting;
 
-import Utils.ArraysUtils;
-
 public class Ex01 {
 	public static void main(String[] args) {
 		int[] numbers = { 1, 5, 9, 4, 6, 11 };
@@ -14,6 +12,6 @@ public class Ex01 {
 				}
 			}
 		}
-		ArraysUtils.printf(numbers);
+		// ArraysUtils.printf(numbers);
 	}
 }

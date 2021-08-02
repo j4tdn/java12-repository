@@ -5,8 +5,15 @@ public class ArraysUtils {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void printf(int[] digits) {
-		for (int digit : digits) {
+	public static void printf(int[] a) {
+		for (Object digit : a) {
+			System.out.println(digit + " ");
+
+		}
+	}
+
+	public static void printf(String[] a) {
+		for (Object digit : a) {
 			System.out.println(digit + " ");
 
 		}
