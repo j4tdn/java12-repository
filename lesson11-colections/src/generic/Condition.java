@@ -1,5 +1,5 @@
 package generic;
 
-public interface Condition {
-
+public interface Condition<E> {
+	boolean test(E e);
 }
