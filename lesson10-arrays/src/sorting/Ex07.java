@@ -1,29 +1,27 @@
 package sorting;
 
+import java.util.Arrays;
 import java.util.Comparator;
 
 import Utils.ArraysUtils;
 
-public class Ex02 {
+public class Ex07 {
 	public static void main(String[] args) {
 		String[] sequences = { "A", null, "b", "D", "a", null, "B" };
-
-		Comparator<String> comparetor = new Comparator<String>() {
+		Arrays.sort(sequences, new Comparator<String>() {
 
 			@Override
-			public int compare(String pre, String next) {
-				// ascending
-
-				if (pre == null) {
-					return 1;
-				}
-				if (next == null) {
+			public int compare(String o1, String o2) {
+				if (o1 == null) {
 					return -1;
 				}
-				return pre.compareTo(next);
+				if (o2 == null) {
+					return 1;
+				}
+				return o1.compareTo(o2);
 			}
-		};
-		sort(sequences, comparetor);
+		});
+
 		ArraysUtils.printf(sequences);
 	}
 
