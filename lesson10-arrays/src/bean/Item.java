@@ -50,19 +50,7 @@ public class Item implements Comparable<Item>{
 	// position: swap
 	@Override
 	public int compareTo(Item item) {
-		if (getId() - item.getId() < 0) {
-			return 1;
-		}
-		
-		if (getId() - item.getId() > 0) {
-			return -1;
-		}
-		
-		if (getName().compareTo(getName()) > 0) {
-			return 1;
-		}
-		
-		return 0;
+		return getId() - item.getId();
 	}
 	
 	

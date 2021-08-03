@@ -1,0 +1,14 @@
+package generic;
+
+import java.util.function.Predicate;
+
+public interface Ilist<E> {
+	int size();
+	boolean isEmpty();
+	boolean add(E t);
+	boolean remove();
+	E get(int i);
+	void set(int i, E t);
+	void show();
+	int count(Predicate<E> cond);
+}
