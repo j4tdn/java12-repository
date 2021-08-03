@@ -13,13 +13,13 @@ public class Ex02 {
 		List<String> stringList = Arrays.asList("a", "b", "c", "d", "e");
 		List<CharSequence> charsList = Arrays.asList("x", "y");
 		
-		printf(intList);
-		printf(floatList);
+//		printf(intList);
+//		printf(floatList);
 		printf(doubleList);
-		printf(stringList);
+//		printf(stringList);
 		
 		printf(numberList);
-		printf(charsList);
+//		printf(charsList);
 
 	}
 
