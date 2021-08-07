@@ -1,6 +1,10 @@
 package bean;
 
+import java.util.Objects;
+
 public class Item implements Comparable<Item> {
+	
+
 	@Override
 	public boolean equals(Object o) {
 		if(this == o) {
@@ -69,11 +73,16 @@ public class Item implements Comparable<Item> {
 		return getStoreId() - item.getStoreId();
 	}
 	
+	@Override
+	public int hashCode() {
+		return Objects.hash(storeId,itemId);
+	}
 	
 
 	@Override
 	public String toString() {
 		return "Item [storeId=" + storeId + ", itemId=" + itemId + ", name=" + name + ", price=" + price + "]";
 	}
+	
 
 }

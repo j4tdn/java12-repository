@@ -17,15 +17,15 @@ public class CollectionUtils {
 		
 		return result; 
 	}
-	public static void printf(List<String> objects) {
-		for(Object object: objects) {
-			System.out.println(object);
-		}
-	}
 	public static void show(List<Integer> elements) {
 		for(Integer element: elements) {
 			System.out.print(element + " ");
 		}
 		System.out.println();
+	}
+	public static <E> void printf(List<E> elements) {
+		for(E element: elements) {
+			System.out.println(element + " ");
+		}
 	}
 }
