@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Item {
 	private int storeId;
 	private int itemId;
@@ -48,6 +50,10 @@ public class Item {
 		this.price = price;
 	}
 	
+	@Override
+	public int hashCode() {
+		return Objects.hash(storeId, itemId);
+	}
 	
 	@Override
 	public boolean equals(Object obj) {

@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 import static java.util.Comparator.*;
 
-import java.util.function.Function;
 
 import static java.util.function.Function.*;
 
@@ -13,7 +12,7 @@ import utils.ArraysUtils;
 
 public class Ex08 {
 	public static void main(String[] args) {
-		String[] sequences = {"A", null, "b", "D", "a", null, "B"};
+		String[] sequences = {"A", null, "b", "D", "a", null, "B", null};
 		
 //		Comparator<String> comparator = (o1, o2) -> o1.compareTo(o2);
 		
@@ -21,7 +20,7 @@ public class Ex08 {
 		
 		// comparing
 		
-		Comparator<String> comparator = nullsFirst(comparing(indentity(), reverseOrder()));
+		Comparator<String> comparator = nullsFirst(comparing(identity()));
 		
 		Arrays.sort(sequences, comparator);
 		
