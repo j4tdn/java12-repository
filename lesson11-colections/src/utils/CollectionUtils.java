@@ -16,9 +16,8 @@ public class CollectionUtils {
 		return result;
 	}
 	public static void printf(List<?> objects) {
-		System.out.println();
 		for(Object o: objects) {
-			System.out.print(o + " ");
+			System.out.println(o + " ");
 		}
 	}
 }
