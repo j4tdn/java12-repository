@@ -16,7 +16,7 @@ public class Ex02 {
 		model.putIfAbsent(43, "Da Nang 01");
 		model.put(75, "Thua Thien Hue");
 		model.put(74, "Quang Tri");
-		
+
 		Map<Integer, String> sortedMap = sort(model);
 		for (Entry<Integer, String> entry: sortedMap.entrySet()) {
 			System.out.println(entry);
