@@ -1,7 +1,11 @@
 package demo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.function.Function;
 
 import bean.Apple;
 import bean.Strategy;
@@ -24,6 +28,26 @@ public class Ex02 {
 		System.out.println("========w Apples =======");
 		CollectionUtils.printf(wApple);
 		
+		System.out.println("=======Map Apples=========");
+		//lambda expressions
+		//get list of origin countries of apples
+		Set<String>  countries = map(inventory, a -> a.getCountry());
+		CollectionUtils.printf(countries);
+		
+		System.out.println("=======Map lengths=========");
+		List<String> texts = Arrays.asList("abc", "abcde", "ab","asdasdas");
+		Set<Integer> lengths = map(texts, s->s.length());
+		CollectionUtils.printf(lengths);
+		
+		
+	}
+	
+	private static <T, R> Set<R> map(List<T> ts, Function<T, R> func){
+		Set<R> result = new HashSet<>();
+		for(T t: ts) {
+			result.add(func.apply(t));
+		}
+		return result;
 	}
 	
 
