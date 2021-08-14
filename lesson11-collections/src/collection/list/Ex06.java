@@ -15,6 +15,6 @@ public class Ex06 {
 		
 		first.removeAll(second);
 		
-		show(first);
+//		show(first);
 	}
 }
