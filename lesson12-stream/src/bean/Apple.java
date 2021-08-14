@@ -52,5 +52,6 @@ public class Apple {
 	public String toString() {
 		return "Apple [id=" + id + ", color=" + color + ", weight=" + weight + ", country=" + country + "]";
 	}
-
+	
+	
 }

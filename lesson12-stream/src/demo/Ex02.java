@@ -1,6 +1,5 @@
 package demo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import bean.Apple;
@@ -10,12 +9,12 @@ public class Ex02 {
 	public static void main(String[] args) {
 		List<Apple> inventory = AppleUtils.getAll();
 	}
-	
+
 	/**
 	 * Get apples with given codition
 	 * 
 	 * @param inventory input data
-	 * @param behavior given condition
+	 * @param behavior  given condition
 	 * @return output data
 	 */
 //	private static List<Apple> filterApples(List<Apple> inventory, datatype behavior) {
