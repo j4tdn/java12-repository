@@ -35,4 +35,11 @@ public class Item {
 		return "Item [id=" + id + ", name=" + name + ", price=" + price + "]";
 	}
 	private double price;
+	
+	
+	public  int compareTo(Item item) {
+		if(getId()-item.getId()>0) return 1;
+		if(getName().compareTo(item.getName())<0) return 1;
+		return -1;
+	}
 }

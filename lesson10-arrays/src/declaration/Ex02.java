@@ -10,6 +10,9 @@ public class Ex02 {
 
 		printf(getDigits(digits, d1 -> d1 % 2 == 0));
 		printf(getDigits(digits, d1 -> d1 % 3 == 0));
+		
+		
+		
 	}
 
 	private static int[] getDigits(int[] digits, Condition cdt) {
@@ -23,12 +26,11 @@ public class Ex02 {
 		// return Arrays.copyOf(result, index);
 		return Arrays.copyOfRange(result, 0, index);
 	}
-
+	
 	static void printf(int[] digits) {
 		for (int digit : digits) {
 			System.out.print(digit+" ");
-			
 		}
-		System.out.println("\n");
+		System.out.println();
 	}
 }

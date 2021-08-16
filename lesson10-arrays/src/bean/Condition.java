@@ -1,5 +1,7 @@
 package bean;
 
-public interface Condition {
-	boolean test(int digit);
+//Strategy
+@FunctionalInterface
+public interface Condition{
+	public boolean test(int digit);
 }
