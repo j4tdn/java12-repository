@@ -8,7 +8,11 @@ public class Apple {
 
 	public Apple() {
 	}
-
+	
+	public Apple(int id,String country) {
+		this.country = country;
+		this.id = id;
+	}
 	public Apple(int id, String color, double weight, String country) {
 		this.id = id;
 		this.color = color;
