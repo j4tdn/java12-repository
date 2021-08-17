@@ -1,12 +1,12 @@
 package utils;
 
-import java.util.List;
+import java.util.Collection;
 
 public class CollectionUtils {
 	private CollectionUtils() {
 	}
 	
-	public static <E> void printf(List<E> elements) {
+	public static <E> void printf(Collection<E> elements) {
 		for(E e : elements) {
 			System.out.println(e);
 		}
