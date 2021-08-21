@@ -1,5 +1,7 @@
 package bean;
 
+
+
 public class Trader {
 	private String name;
 	private String city;
@@ -21,12 +23,10 @@ public class Trader {
 		
 		return trader;
 	}
-	
 	public Trader(String n, String c) {
 		this.name = n;
 		this.city = c;
 	}
-
 	public String getName() {
 		return this.name;
 	}

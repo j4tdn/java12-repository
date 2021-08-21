@@ -2,6 +2,8 @@ package demo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 import bean.Trader;
@@ -24,6 +26,13 @@ public class Ex06 {
 //		}
 		List<Trader> traders = convert(lines, Trader::transfer);
 		traders.forEach(System.out::println);
+//		traders.forEach(new Consumer<Trader>() {
+//			@Override
+//			public void accept(Trader t) {
+//				System.out.println(t);
+//				
+//			}
+//		});
 	}
 	
 	private static <T> List<T> convert(List<String> lines, Function<String, T> function){
