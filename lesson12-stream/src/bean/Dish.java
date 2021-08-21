@@ -23,7 +23,7 @@ public class Dish {
         this.kind = kind;
         this.vegetarian = vegetarian;
     }
-
+    
     public String getId() {
         return id;
     }

@@ -19,13 +19,11 @@ public class Ex02 {
 		System.out.println("default locale: " + Locale.getDefault());
 		
 		Calendar c = Calendar.getInstance();
-		c.set(Calendar.DAY_OF_MONTH, 16);
+		c.set(Calendar.DAY_OF_MONTH, 26);
 		//16.06.2021
-		
 		int firstDayOfWeek = c.getFirstDayOfWeek();
 		System.out.println("firstDayOfWeek: " + firstDayOfWeek);
-		
-		c.add(Calendar.DAY_OF_MONTH,firstDayOfWeek - c.get(Calendar.DAY_OF_WEEK));
+		c.add(Calendar.DAY_OF_MONTH, firstDayOfWeek - c.get(Calendar.DAY_OF_WEEK));
 		System.out.println("date: " + df.format(c.getTime()));
 		
 		c.set(Calendar.YEAR, 2020);
