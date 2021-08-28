@@ -1,12 +1,8 @@
 package demo;
 
 import java.util.List;
-<<<<<<< HEAD
-=======
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
->>>>>>> 52aff08 (lesson12-stream 21-08-2021)
 
 import bean.Dish;
 import bean.Dish.Kind;
@@ -28,10 +24,6 @@ public class Ex07 {
 				})
 				.toArray(String[]::new);
 		
-<<<<<<< HEAD
-//		meatDishes.forEach(System.out::println);
-		
-=======
 		List<Double> uniqueDish = menu.stream()
 				.collect(Collectors.groupingBy(Dish::getCalories, Collectors.counting()))
 				.entrySet()
@@ -41,6 +33,5 @@ public class Ex07 {
 				.collect(Collectors.toList());
 		
 		System.out.println(uniqueDish);
->>>>>>> 52aff08 (lesson12-stream 21-08-2021)
 	}
 }

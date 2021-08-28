@@ -1,30 +1,19 @@
 package demo;
 
 import java.util.Arrays;
-<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-
-import utils.ArrayUtils;
-import utils.CollectionUtils;
-
-public class Ex08 {
-	public static void main(String[] args) {
-		int[] digits = {1, 2, 1, 3, 3, 2, 4};
-=======
-import java.util.List;
 import java.util.Map.Entry;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import utils.ArrayUtils;
 
+
 public class Ex08 {
 	public static void main(String[] args) {
 		int[] digits = {1, 2, 1, 3, 3, 2, 4,6};
->>>>>>> 52aff08 (lesson12-stream 21-08-2021)
 		
 		int[] evenNumbers = Arrays.stream(digits)
 			.filter(number -> number % 2 == 0)
@@ -33,7 +22,6 @@ public class Ex08 {
 		
 		ArrayUtils.printf(evenNumbers);
 		
-<<<<<<< HEAD
 		Map<Integer, Integer> arr = new HashMap<>();
 		for(int i = 0; i < digits.length; i++) {
 			if(!arr.containsKey(i)) {
@@ -43,7 +31,6 @@ public class Ex08 {
 		
 		System.out.println(arr);
 		
-=======
 		List<Integer> distinctNumbers = Arrays.stream(digits)
 				.boxed()
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
@@ -54,7 +41,6 @@ public class Ex08 {
 				.collect(Collectors.toList());
 		
 		System.out.println(distinctNumbers);
->>>>>>> 52aff08 (lesson12-stream 21-08-2021)
 		/*List<Integer> numbers = Arrays.asList(1, 2, 1, 3, 3, 2, 4);
 		
 		List<Integer> evenNumbers = numbers.stream()
