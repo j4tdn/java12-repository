@@ -12,6 +12,11 @@ public class Ex02 {
 
     public static void main(String[] args) {
         List<Apple> inventory = AppleUtils.getAll();
+        final long startTime = System.currentTimeMillis();
+
+        long time ;
+
+
 
         System.out.println("======= Green Apples ======");
         List<Apple> greenApples = filterApples(inventory, c -> "green".equals(c.getColor()));
@@ -35,7 +40,12 @@ public class Ex02 {
 
         System.out.println("======== Weight and Country Apples =======");
         List<Apple> applesBy = filterApples(inventory, c -> "Vietnam".equals(c.getCountry()));
+
         CollectionUtils.printf(applesBy);
+
+
+        final long endTime = System.currentTimeMillis();
+        System.out.println(" XX: "+(endTime - startTime)+" ms");
     }
 
     /**
@@ -57,5 +67,6 @@ public class Ex02 {
         }
 
         return result;
+
     }
 }

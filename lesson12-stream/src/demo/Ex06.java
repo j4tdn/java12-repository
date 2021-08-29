@@ -1,12 +1,13 @@
 package demo;
 
+
 import bean.Dish;
 import bean.Dish.Kind;
 import utils.DishUtils;
 
 import java.util.List;
 
-public class Ex07 {
+public class Ex06 {
     public static void main(String[] args) {
         //stream is "sequences of elements from Source that helps manipulate collections of data"
         //source: menu

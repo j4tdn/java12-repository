@@ -88,14 +88,11 @@ public class Ex01 {
         Objects.requireNonNull(country, "color cannot be null");
 
         List<Apple> result = new ArrayList<>();
-
         for (Apple apple : inventory) {
             if (apple.getWeight() > weight && country.equals(apple.getCountry())) {
                 result.add(apple);
             }
         }
-
         return result;
     }
-
-    }
+}

@@ -16,6 +16,10 @@ public class Apple {
         this.country = country;
     }
 
+    public Apple(Integer integer, String s) {
+    }
+
+
     public int getId() {
         return id;
     }
