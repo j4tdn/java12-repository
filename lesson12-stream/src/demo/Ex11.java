@@ -3,8 +3,13 @@ package demo;
 import java.util.Arrays;
 import java.util.OptionalInt;
 
+import javax.swing.plaf.synth.SynthGraphicsUtils;
+
+import bean.Apple;
+
 public class Ex11 {
 	public static void main(String[] args) {
+		
 		int[] digits = {1, 2, 1, 4, 5, 8, 10, 4, 12};
 		
 		// 1st

@@ -1,5 +1,6 @@
 package demo;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
@@ -13,7 +14,7 @@ public class Ex07 {
 		// Stream is "sequences of elements from SOURCE that helps manipulate collection of data"
 		List<Dish> menu = DishUtils.getAll();
 		
-		menu.stream()
+		String[] a = menu.stream()
 				.filter(dish -> {
 					System.out.println("filter: " + dish.getName());
 					return Kind.MEAT.equals(dish.getKind());
@@ -23,7 +24,9 @@ public class Ex07 {
 					return dish.getName();
 				})
 				.toArray(String[]::new);
-		
+		for(String b : a) {
+			System.out.println(b);
+		}
 		List<Double> uniqueDish = menu.stream()
 				.collect(Collectors.groupingBy(Dish::getCalories, Collectors.counting()))
 				.entrySet()

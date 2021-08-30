@@ -6,5 +6,4 @@ public interface MouseEvent {
 	void mouseClick();
 	void mouseDrag();
 	void mouseDrop();
-	
 }
