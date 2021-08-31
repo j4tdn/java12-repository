@@ -24,6 +24,8 @@ public class Dish {
         this.vegetarian = vegetarian;
     }
     
+    
+    
     public String getId() {
         return id;
     }
@@ -67,5 +69,9 @@ public class Dish {
     @Override
     public String toString() {
         return id + ", " + name + ", " + calories + ", " + kind + ", " + vegetarian;
+    }
+    
+    public static Dish maxClr(Dish d1, Dish d2) {
+    	return d1.getCalories() > d2.getCalories() ? d1 : d2;
     }
 }
