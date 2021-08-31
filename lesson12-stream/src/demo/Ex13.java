@@ -58,4 +58,5 @@ public class Apple {
 		return "Apple [id=" + id + ", color=" + color + ", weight=" + weight + ", country=" + country + "]";
 	}
 	
+	
 }
