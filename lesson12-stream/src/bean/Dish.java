@@ -1,11 +1,11 @@
 package bean;
 
 public class Dish {
-	
-	public enum Kind {
-		MEAT, FISH, OTHER
-	}
-	
+
+    public enum Kind {
+        MEAT, FISH, OTHER
+    }
+
     private String id;
     private String name;
     private double calories;
@@ -49,13 +49,13 @@ public class Dish {
     }
 
     public Kind getKind() {
-		return kind;
-	}
-    
+        return kind;
+    }
+
     public void setKind(Kind kind) {
-		this.kind = kind;
-	}
-    
+        this.kind = kind;
+    }
+
     public boolean isVegetarian() {
         return vegetarian;
     }
@@ -63,9 +63,27 @@ public class Dish {
     public void setVegetarian(boolean vegetarian) {
         this.vegetarian = vegetarian;
     }
-    
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (!(o instanceof Dish)) {
+            return false;
+        }
+
+        Dish dish = (Dish) o;
+        return getCalories() == dish.getCalories();
+    }
+
     @Override
     public String toString() {
         return id + ", " + name + ", " + calories + ", " + kind + ", " + vegetarian;
+    }
+
+    public static Dish maxClr(Dish d1, Dish d2) {
+        return d1.getCalories() > d2.getCalories() ? d1 : d2;
     }
 }

@@ -1,14 +1,14 @@
 package demo;
 
+import bean.Apple;
+import utils.AppleUtils;
+import utils.CollectionUtils;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Function;
-
-import bean.Apple;
-import utils.AppleUtils;
-import utils.CollectionUtils;
 
 public class Ex04 {
 	public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class Ex04 {
 		// ClassA::method
 
 		// (String s) -> s.length()
-		// (String s) -> s.length()
+		// String::length
 
 		System.out.println("====== Map Length ======");
 		List<String> texts = Arrays.asList("abc", "abcde", "ad", "abcdef");
@@ -34,6 +34,7 @@ public class Ex04 {
 		CollectionUtils.printf(lengths);
 
 		// Example 03
+		// args -> Class.StaticMethod(args) => Class::StaticMethod
 		// Function<String, Integer> f1 = s -> Integer.parseInt(s);
 		Function<String, Integer> f1 = Integer::parseInt;
 	}

@@ -1,6 +1,6 @@
 package bean;
 
 @FunctionalInterface
-public interface Stratrgy<T> {
+public interface Strategy<T> {
 	boolean behavior(T t);
 }
