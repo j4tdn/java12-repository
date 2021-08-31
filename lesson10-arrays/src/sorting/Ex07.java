@@ -1,5 +1,10 @@
 package sorting;
 
+import static java.util.Comparator.comparing;
+import static java.util.Comparator.nullsLast;
+import static java.util.Comparator.reverseOrder;
+import static java.util.function.Function.identity;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -21,7 +26,7 @@ public class Ex07 {
 				return o1.compareTo(o2);
 			}
 		});
-
+		Comparator<String> comparator = nullsLast(comparing(identity(), reverseOrder()));
 		ArraysUtils.printf(sequences);
 	}
 
