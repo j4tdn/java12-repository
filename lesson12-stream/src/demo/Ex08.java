@@ -9,30 +9,51 @@ import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import utils.ArrayUtils;
 import utils.CollectionUtils;
 
 public class Ex08 {
 	public static void main(String[] args) {
-		int[] digits = { 1, 2, 3, 2, 1, 4, 6, 2, 1, 4, 6, 7, 0 };
+		int[] digits = { 1, 2, 3, 2, 1, 4, 6, 2, 1, 4, 6, 7, 0,13,0 };
 
-		List<Integer> numbers = Arrays.stream(digits).boxed().collect(Collectors.toList());
+		int[] evenNumbrs=Arrays.stream(digits).filter(x->x%2==0).distinct().toArray();
+		printNbrs(evenNumbrs);
+		System.out.println("\n=======================================");
+		
+		//Convert array -> list
+		// ko thể đưa trực tiếp array int[] sang list<Integer> được
+		List<Integer> numbers = Arrays.stream(digits)            //IntStream
+								.boxed()                         //IntStream -> stream<Integer>
+								.collect(Collectors.toList());   //List<Integer>
+		
 		
 		//Tim cac so xuat hien chi mot lan
+		/*
+		 * frequency chỉ nhận tham số là collection, ko nhận array
+		 */
 		List<Integer> uniqueNumbers = numbers
 				                    .stream()
 				                    .filter(nbr -> Collections.frequency(numbers, nbr) == 1)
 				                    .collect(Collectors.toList());
-
-		CollectionUtils.printf(uniqueNumbers);
+		uniqueNumbers.forEach(System.out::println);
 		
-//		Map<Integer, List<Integer>> result= numbers
-//        .stream()
-//        .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
-//        .entrySet()
-//        .stream()
-//        .filter(entry->entry.getValue()==1)
-//        .map(Entry::getKey).collect(Collectors.toList()).forEach(System.out::println)
-//        ;
-
+		
+		System.out.println("========================================================");
+		
+		numbers.stream()
+        .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))  //Map<Integer, List<Integer>> 
+        .entrySet()      							 //Set<Entry<Integer,long>>                      
+        .stream()									 //Stream<Entry<Integer,long>>  
+        .filter(entry->entry.getValue()==1)          //Entry<Key,value>  with value=1
+        .map(Entry::getKey)							//Stream<Integer>
+        .collect(Collectors.toList())               //List<Integer>
+        .forEach(System.out::println);
+		
+		
+	}
+	private static void printNbrs(int []a) {
+		for(int i: a) {
+			System.out.print(i+" ");
+		}
 	}
 }

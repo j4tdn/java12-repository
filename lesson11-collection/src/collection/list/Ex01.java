@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Ex01 {
 	public static void main(String[] args) {
-		//prior ver1.5
+		//Các version trước ver1.5
 		List l1 = new ArrayList(); 
 		//no elements
 		//required: list of numbers

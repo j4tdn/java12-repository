@@ -25,6 +25,7 @@ public class Ex01 {
 	}
 
 	private static List<Apple> filterColor(List<Apple> inventory, String color) {
+		
 		List<Apple> result = new ArrayList<Apple>();
 		for (Apple apple : inventory) {
 			if (color.equals(apple.getColor())) {
@@ -47,17 +48,17 @@ public class Ex01 {
 		
 		case LIGHT:
 			for (Apple apple : inventory) {
-				if (apple.getWeight()<weight) {
+				if (apple.getWeight() < weight) {
 					result.add(apple);
 				}
 			}
 			break;}
 		return result;
 	}
+	
 	private static List<Apple> filterApples(List<Apple> inventory, double weight, String color){
 		Objects.requireNonNull(inventory, "Inventory cannot be null");
-		Objects.requireNonNull(color,"color cannot be null");
-		
+		Objects.requireNonNull(color,"color cannot be null");	
 		List<Apple> result = new ArrayList<Apple>();
 		for(Apple apple : inventory) {
 			if(apple.getWeight()>weight && color.equals(apple.getColor())) {

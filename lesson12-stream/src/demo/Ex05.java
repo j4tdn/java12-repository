@@ -1,16 +1,14 @@
 package demo;
-
-import java.util.function.BiFunction;
-import java.util.function.Predicate;
 import java.util.function.Supplier;
-
 import bean.Apple;
 import funtional.BiFuntion;
 import funtional.BuFuntion;
-
+/*
+ * Construction reference
+ */
 public class Ex05 {
 	public static void main(String[] args) {
-		//Construction reference
+		
 		
 		//Default constructor
 		//Supplier<Apple> supplier = () -> new Apple();
@@ -29,5 +27,21 @@ public class Ex05 {
 		System.out.println(a3);
 		
 		
+		System.out.println("=================================");
+		test(Apple::new,12,"Italu",(x,y)->new Apple(x,y));
+		test(()->new Apple(),0,"Italu",Apple::new);
 	}
+	
+	private static void test(Supplier<Apple> sup, int id, String country , BiFuntion<Apple, Integer, String>bi) {
+		Apple a = null;
+		if(id==0 || country == null) {
+			a = sup.get();
+		}
+		else {
+			a=bi.get(id, country);
+		}
+		System.out.println(a);
+	}
+	
+	
 }

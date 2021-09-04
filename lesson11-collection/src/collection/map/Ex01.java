@@ -17,7 +17,7 @@ public class Ex01 {
 	 */
 	public static void main(String[] args) {
 		//null first
-		Comparator<Integer> keycomp1=new Comparator<Integer>() {
+		Comparator<Integer> keycomp1 = new Comparator<Integer>() {
 			@Override
 			public int compare(Integer k1, Integer k2) {
 				if(k1==null) {
@@ -29,11 +29,13 @@ public class Ex01 {
 				return k2.compareTo(k1);
 			}
 		};
-		Comparator<Integer>keycome2 = Comparator.nullsFirst(Comparator.comparing(Function.identity()));
+		Comparator<Integer>keycomp2 = Comparator.nullsFirst(Comparator.comparing(Function.identity()));
+		//                            Comparator.nullsFirst(Comparator.comparing(x-> x));
+		
 		
 		//model vehicle
 		//Map<Integer, String>model=new HashMap<>();
-		Map<Integer, String>model=new TreeMap<>(keycome2);
+		Map<Integer, String>model=new TreeMap<>(keycomp2); 
 		model.put(92, "QN");
 		model.put(43, "DN");
 		model.put(75, "TTH");
@@ -41,7 +43,8 @@ public class Ex01 {
 		model.put(74, "QT");
 		model.put(43, "DN01");
 		model.put(null, "Undifined");
-		model.putIfAbsent(74, "QT 01");  //hàm putIfAbsent sẽ kiểm tra nếu key chưa có
+		model.putIfAbsent(74, "QT 01");  
+		//hàm putIfAbsent sẽ kiểm tra nếu key chưa có
 		//thì mới put ,nếu key có rồi thì trả về gtri cũ
 		
 		

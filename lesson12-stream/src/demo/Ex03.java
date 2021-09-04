@@ -1,7 +1,9 @@
 package demo;
 
 import bean.Apple;
-
+/*
+ * closure function
+ */
 public class Ex03 {
 	public static void main(String[] args) {
 	
@@ -36,7 +38,7 @@ public class Ex03 {
 			//closure function
 			//function can reference to outer scope variables
 			//even those variables are cleared after finish outer function
-			//nonlocal variables are explicitly final >> From ver 1.8
+			//nonlocal variables are explicitly final variable >> From ver 1.8
 			@Override
 			public void run() {
 				//local variable

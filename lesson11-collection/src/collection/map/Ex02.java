@@ -1,14 +1,11 @@
 package collection.map;
 
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
-import java.util.TreeMap;
 
 public class Ex02 {
 public static void main(String[] args) {
@@ -33,4 +30,5 @@ private static Map<Integer,String> sort(Map<Integer, String>model) {
 	}
 	return sortedMap;
 }
+
 }

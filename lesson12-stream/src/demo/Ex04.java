@@ -10,23 +10,26 @@ import bean.Apple;
 import utils.AppleUtils;
 import utils.CollectionUtils;
 
+
+/*
+ * Method reference
+ */
 public class Ex04 {
 public static void main(String[] args) {
 	List<Apple> inventory =AppleUtils.getAll();
-	
-	
 	// instance -> ClassA.[ClassB.ClassC...].method(instance)   
 	// <=> ClassA.[ClassB.ClassC...]::method
 	
 	Consumer<Apple> c1 = a-> System.out.println(a);
-	Consumer<Apple> c2 = System.out::println;
+	Consumer<Apple> c11 = System.out::println;
 	
-	Consumer<Apple> c3 = a-> System.out.println(a.getCountry());
+	Consumer<Apple> c2 = a-> System.out.println(a.getCountry());
+	inventory.forEach(c2);
 	
-	inventory.forEach(c3);
+	
 	
 	System.out.println("\n===================");
-	inventory.forEach(c2);
+	inventory.forEach(c11);
 	
 	
 	//EX02
@@ -42,5 +45,21 @@ public static void main(String[] args) {
 	Function<String , Integer>f1 = Integer::parseInt;
 	/*Function<String , Integer>f1 = s-> Integer.parseInt(s);*/
 
+	
+	//Ex04
+	compare(inventory, inventory, Apple::getId);
+	/*compare(inventory, inventory, x->x.getId());  */
 }
+private static boolean compare(List<Apple> a1,List<Apple> a2,Function<Apple, Integer> func) {
+	if(a1.size()!=a2.size())return false;
+	
+	for(int i=0; i< a1.size();i++) {
+		if(!(func.apply(a1.get(i)).equals(func.apply(a2.get(i))))) {
+			return false;
+		}
+	}
+	return true;
+}
+
+
 }

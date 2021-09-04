@@ -1,5 +1,5 @@
 package bean;
 
-public interface Strategy<E> {
-boolean behavior(E e);
+public interface Strategy<T> {
+	boolean behavior(T e);
 }
