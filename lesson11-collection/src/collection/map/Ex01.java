@@ -87,7 +87,7 @@ public class Ex01 {
 	}
 	//iterate via value
 		private static void iterateByValue(Map<Integer, String>model) {
-			  Collection<String> values =model.values();
+			  Collection<String> values = model.values();
 			  System.out.println("iterate via value: ");
 			for(String value:values) {
 				System.out.print(value+" ");
