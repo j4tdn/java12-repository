@@ -1,7 +1,9 @@
 package collection.set;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 import bean.Item;
 
@@ -15,5 +17,7 @@ public class Ex02 {
 		items.add(new Item(101, 1, "A", 120));
 
 		System.out.println("size: " + items.size());
+		
+		
 	}
 }

@@ -19,6 +19,7 @@ public class Ex04 {
 		
 		Consumer<Apple> c1 = a -> System.out.println(a);
 		Consumer<Apple> c2 = System.out::println;
+	
 		
 		inventory.forEach(System.out::println);
 		

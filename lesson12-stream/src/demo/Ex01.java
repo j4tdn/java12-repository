@@ -3,6 +3,7 @@ package demo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Consumer;
 
 import bean.Apple;
 import bean.WeightType;
@@ -10,10 +11,11 @@ import utils.AppleUtils;
 import utils.CollectionUtils;
 
 public class Ex01 {
+	private static int g;
+
 	public static void main(String[] args) {
 		// input data
 		List<Apple> inventory = AppleUtils.getAll();
-
 		System.out.println("======== Green Apples =======");
 		List<Apple> greenApp = filterApples(inventory, "green");
 		CollectionUtils.printf(greenApp);

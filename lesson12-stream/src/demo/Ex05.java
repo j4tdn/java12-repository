@@ -16,6 +16,7 @@ public class Ex05 {
 		
 		//2
 		BiFunction<Apple, Integer, String> biFunction = Apple::new;
+		
 		Apple apple3 = biFunction.get(3, "Thailand");
 		System.out.println(apple3);
 		

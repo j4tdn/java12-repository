@@ -29,6 +29,7 @@ public class Ex01 {
 	}
 
 	private static void iteratebyvalue(Map<Integer, String> model) {
+		
 		Collection<String> collection = model.values();
 		for (String item : collection) {
 			System.out.println("value: " + item);
