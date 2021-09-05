@@ -12,7 +12,8 @@ public class Ex03 {
         Dictionary dictionary = new Dictionary(words);
         Word word = new Word("computer", "may tinh", "noun", "");
         dictionary.add(word);
-        Word searchWord = dictionary.search("computer");
+        Word searchWord = dictionary.search("computer"); // return null if fail
         dictionary.printf();
+
     }
 }

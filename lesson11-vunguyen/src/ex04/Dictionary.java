@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Dictionary {
-    private Map<String, Word> words;
+    private final Map<String, Word> words;
 
     public Dictionary() {
         words = new HashMap<>();

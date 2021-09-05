@@ -8,6 +8,9 @@ public final class CardUtils {
     private CardUtils() {
     }
 
+    public static void main(String[] args) {
+    }
+
     public static List<Card<String>> createDeck() {
         String[] ranks = {"2", "3", "4", "5", "6", "7", "8" ,"9" ,"10", "J", "Q", "K", "A"};
         Card.Suit[] suits = Card.Suit.values();
