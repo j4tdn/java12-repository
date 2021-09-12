@@ -1,9 +1,9 @@
 package definition;
 
+import common.Extension;
 import utils.FileUtils;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 
 public class Ex01 {
@@ -22,12 +22,7 @@ public class Ex01 {
         // filter
         File dirFile = new File(dirPath);
 
-        File[] files = dirFile.listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File file) {
-                return dirFile.isFile() && file.getName().endsWith(".txt");
-            }
-        });
+        File[] files = dirFile.listFiles(file -> file.isFile() && file.getName().endsWith(Extension.txt.val()));
         FileUtils.printf(files);
     }
 }

@@ -1,15 +1,83 @@
 package utils;
 
 import common.Extension;
+import common.FileHandler;
 
 import java.awt.*;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.OpenOption;
+import java.nio.file.Path;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public final class FileUtils {
     public static Random rd = new Random();
 
     private FileUtils() {
+    }
+
+    public static <T> List<T> readObject(File file) {
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+
+        try {
+            fis = new FileInputStream(file);
+            ois = new ObjectInputStream(fis);
+            return safeList(ois.readObject());
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return Collections.emptyList();
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T> List<T> safeList(Object object) {
+        return (List<T>) object;
+    }
+
+    public static void writeObject(File file, Object object) {
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+        try {
+            fos = new FileOutputStream(file);
+            oos = new ObjectOutputStream(fos);
+
+            oos.writeObject(object);
+            oos.close();
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static <T extends FileHandler> void writeLines(Path path, List<T> list, OpenOption option) {
+        java.util.List<String> lines = list.stream()
+                                           .map(T::toLine)
+                                           .collect(Collectors.toList());
+
+        try {
+            Files.write(path, lines, option);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static <R> List<R> readLines(Path path, Function<String, R> func) {
+        List<String> lines;
+        try {
+            lines = Files.readAllLines(path);
+
+            return lines.stream()
+                        .map(func)
+                        .collect(Collectors.toList());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return Collections.emptyList();
     }
 
     public static void read(File file) {
@@ -36,10 +104,10 @@ public final class FileUtils {
 
     public static void write(File file) {
         // write file >> draft
-        FileWriter fw = null;
+        java.io.FileWriter fw = null;
         BufferedWriter bw = null;
         try {
-            fw = new FileWriter(file, true);
+            fw = new java.io.FileWriter(file, true);
             bw = new BufferedWriter(fw);
 
             bw.write("Transaction: Alan - Milan 25000\n");
@@ -54,18 +122,18 @@ public final class FileUtils {
         FileUtils.open(file);
     }
 
-    public static void printf(File ... files) {
+    public static void printf(File... files) {
         for (File file : files) {
             System.out.println(file.getPath());
         }
     }
 
     public static File create(String path) {
-        boolean isValid = false;
+        boolean isValid = true;
         File file = new File(path);
         if (!file.exists()) {
             File parent = file.getParentFile();
-            if (!parent.exists()) {
+            if (parent != null && !parent.exists()) {
                 parent.mkdirs();
             }
             isValid = createFile(file);
@@ -108,8 +176,8 @@ public final class FileUtils {
         }
     }
 
-    public static void close(AutoCloseable ... closeables) {
-        for (AutoCloseable closeable: closeables) {
+    public static void close(AutoCloseable... closeables) {
+        for (AutoCloseable closeable : closeables) {
             if (closeable != null) {
                 try {
                     closeable.close();
