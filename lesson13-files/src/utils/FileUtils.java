@@ -4,24 +4,63 @@ import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.OpenOption;
+import java.nio.file.Path;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import common.Extension;
+import common.FileHandler;
 
 public class FileUtils {
 	private static final Random rd = new Random();
 	private FileUtils() {
 		// TODO Auto-generated constructor stub
 	}
+	public static <E extends FileHandler> void writeLines(Path path, List<E> list,OpenOption option) {
+		
+		List<String> lines = list.stream()
+							.map(E::toLine)
+							.collect(Collectors.toList());
+		
+		
+		try {
+			Files.write(path,lines,option);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Write file successfull");
+	}
+	public static <E> List<E> readLines(Path path, Function<String, E> func) {
+		try {
+			List<String> lines = Files.readAllLines(path);
+			return lines.stream().map(func)
+					.collect(Collectors.toList());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return Collections.emptyList();
+	}
+	
 	public static File create(String path) {
-		boolean isValid = false;
+		boolean isValid = true;
 		File file = new File(path);
 		if(!file.exists()) {
 			File parent = file.getParentFile();
-			if(!parent.exists()) {
+			if(parent!=null && !parent.exists()) {
 				parent.mkdirs();
 			}
 			isValid = createFile(file);
@@ -107,6 +146,37 @@ public class FileUtils {
 			} catch (Exception e) {
 				System.out.println("error:" + e);
 			}
+		}
+	}
+	@SuppressWarnings("resource")
+	public static <T> List<T> readObject(File file){
+		FileInputStream fis=null;
+		ObjectInputStream ois=null;
+		try {
+			fis = new FileInputStream(file);
+			ois = new ObjectInputStream(fis);
+			
+			return safeList(ois.readObject());
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return Collections.emptyList();
+	}
+	@SuppressWarnings("unchecked")
+	private static <T> List<T> safeList(Object o){
+		return(List<T>) o;
+	}
+	public static void writeObject(File file, Object o) {
+		FileOutputStream fos= null;
+		ObjectOutputStream oos=null;
+		try {
+			fos = new FileOutputStream(file);
+			oos = new ObjectOutputStream(fos);
+			oos.writeObject(o);
+			oos.close();
+			fos.close();
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
 	}
 }
