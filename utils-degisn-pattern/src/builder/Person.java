@@ -13,6 +13,7 @@ public class Person {
 		this.age = builder.age;
 		this.hobbies = builder.hobbies;
 	}
+
 	public static Builder builder() {
 		return new Builder();
 	}
@@ -34,12 +35,19 @@ public class Person {
 	public int getAge() {
 		return age;
 	}
+
 	@Override
 	public String toString() {
-		
-		return firstName+"\t" +age+"\t"+hobbies+"\t"+lastName;
+
+		return firstName + "\t" + age + "\t" + hobbies + "\t" + lastName;
 	}
+
 	public static class Builder {
+		private String firstName;
+		private String lastName;
+		private String hobbies;
+		private int age;
+
 		public Builder setFirstName(String firstName) {
 			this.firstName = firstName;
 			return this;
@@ -60,15 +68,10 @@ public class Person {
 			return this;
 		}
 
-		private String firstName;
-		private String lastName;
-		private String hobbies;
-		private int age;
 		private Builder() {
 		}
-		
-		public Person build()
-		{
+
+		public Person build() {
 			return new Person(this);
 		}
 	}
