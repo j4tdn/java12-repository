@@ -1,94 +1,69 @@
 package ex02;
 
+import java.util.Objects;
+
 public class CD {
-    private int id;
-    private String name;
-    private String type;
-    private String singer;
-    private int numberOfTracks;
-    private double price;
-
-    public CD() {
-    }
-
-    public CD(int id, String name, String type, String singer, int numberOfTracks, double price) {
-        this.id = id;
-        this.name = name;
-        this.type = type;
-        this.singer = singer;
-        this.numberOfTracks = numberOfTracks;
-        this.price = price;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getSinger() {
-        return singer;
-    }
-
-    public void setSinger(String singer) {
-        this.singer = singer;
-    }
-
-    public int getNumberOfTracks() {
-        return numberOfTracks;
-    }
-
-    public void setNumberOfTracks(int numberOfTracks) {
-        this.numberOfTracks = numberOfTracks;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    @Override
-    public String toString() {
-        return "CD{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                ", singer='" + singer + '\'' +
-                ", numberOfTracks=" + numberOfTracks +
-                ", price=" + price +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof CD)) {
-            return false;
-        }
-        CD that = (CD) o;
-        return id == that.id;
-    }
+	private int id;
+	private String type;
+	private String singer;
+	private int numOfSong;
+	private double cost;
+	
+	public CD(int id, String type, String singer, int numberSong, double cost) {
+		this.id = id;
+		this.type = type;
+		this.singer = singer;
+		this.numOfSong = numberSong;
+		this.cost = cost;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getSinger() {
+		return singer;
+	}
+	public void setSinger(String singer) {
+		this.singer = singer;
+	}
+	public int getNumberSong() {
+		return numOfSong;
+	}
+	public void setNumberSong(int numberSong) {
+		this.numOfSong = numberSong;
+	}
+	public double getCost() {
+		return cost;
+	}
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+	@Override
+	public String toString() {
+		return "CD [id=" + id + ", type=" + type + ", singer=" + singer + ", numOfSong=" + numOfSong + ", cost="
+				+ cost + "]";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(this == obj) return true;
+		if(!(obj instanceof CD)) return false;
+		CD that = (CD) obj;
+		return id == that.id;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	
 }
