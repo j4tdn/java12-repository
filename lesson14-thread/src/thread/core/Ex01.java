@@ -1,0 +1,30 @@
+package thread.core;
+
+import static utils.ThreadUtils.*;
+
+import java.util.concurrent.TimeUnit;
+
+public class Ex01 {
+	
+	//thread main
+	public static void main(String[] args) {
+		System.out.println("main start");
+
+		Thread t = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				doTask(2, TimeUnit.SECONDS);
+				
+				printCurrentThreadName();
+				System.out.println("running a task ...");
+			}
+		}, "thread1");
+		t.start();
+
+		// current thread
+		printCurrentThreadName();
+
+		System.out.println("anything");
+	}
+}
