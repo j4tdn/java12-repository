@@ -8,6 +8,10 @@ import utils.ArrayUtils;
 import utils.CollectionUtils;
 
 public class Ex10 {
+	/**
+	 * FlatMap
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		List<String> s1 = Arrays.asList("a", "b", "c");
 		List<String> s2 = Arrays.asList("I", "II", "II");
