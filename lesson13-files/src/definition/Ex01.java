@@ -31,6 +31,6 @@ public class Ex01 {
 				return pathname.isFile() && pathname.getName().endsWith(Extension.txt.val());
 			}
 		});
-		FileUtils.print(files);
+		//FileUtils.print(files);
 	}
 }
