@@ -17,6 +17,7 @@ import java.nio.file.Path;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -109,6 +110,38 @@ public class FileUtils {
 			// TODO: handle exception
 			System.out.println("error readfile: " + e);
 		} 
+	}
+	public static void writeFile(Set<Integer> numbersSet) {
+		File file = new File("output.txt");
+		if (!file.exists()) {
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		FileWriter fw = null;
+		BufferedWriter bw = null;
+
+		try {
+			fw = new FileWriter(file);
+			bw = new BufferedWriter(fw);
+
+			for (Integer number : numbersSet) {
+				bw.write(number.toString());
+				bw.newLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+				fw.close();
+			} catch (IOException e2) {
+				e2.printStackTrace();
+			}
+		}
 	}
 	public static void write(File file) {
 		//write file >> draft
