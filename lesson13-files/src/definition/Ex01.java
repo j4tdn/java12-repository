@@ -23,7 +23,7 @@ public class Ex01 {
 				return file.isFile() && file.getName().endsWith(Extension.txt.value());
 			}
 		});
-		FileUtils.printf(list);
+		FileUtils.print(list);
 
 	}
 }

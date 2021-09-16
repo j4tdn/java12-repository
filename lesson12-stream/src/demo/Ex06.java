@@ -21,8 +21,8 @@ public class Ex06 {
 		// Using method reference
 //		List<Trader> traders = convert(lines, Trader::new);
 //		traders.forEach(System.out::println);
-		Array.newInstance(Object.class, size);
-		Array.newInstance(null, 0)
+//		Array.newInstance(Object.class, size);
+//		Array.newInstance(null, 0)
 	}
 
 	private static <T> List<T> convert(List<String> lines, Function<String, T> function) {
