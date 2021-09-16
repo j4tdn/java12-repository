@@ -19,7 +19,7 @@ public class App {
 				String name = pathname.getName();
 				if (name.endsWith(".png") || name.endsWith(".jpg") || name.endsWith(".jpeg"))
 					return true;
-				return false;
+				return false; 
 			}
 		});
 		File[] files2 = dirFile.listFiles(new FileFilter() {

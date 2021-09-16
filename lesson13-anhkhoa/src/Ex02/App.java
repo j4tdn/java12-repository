@@ -11,9 +11,9 @@ public class App {
 	private static String Pathh = "garbage//images";
 
 	public static void main(String[] args) {
-		FileUtils.createDirectory(child, dir);
-		FileUtils.create(Pathh, 30, new Extension[] { Extension.pnq, Extension.jpg });
-		File file = new File(Pathh);
+		FileUtils.createDirectory(child, dir); 
+		FileUtils.create(Pathh, 30, new Extension[] { Extension.pnq, Extension.jpg }); 
+		File file = new File(Pathh); 
 		File[] files = file.listFiles(a -> a.getName().endsWith(Extension.pnq.getvalue()));
 		File[] files1 = file.listFiles(a -> a.getName().endsWith(Extension.jpg.getvalue()));
 		FileUtils.renametoEx02(files, Pathh);

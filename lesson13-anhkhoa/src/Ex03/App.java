@@ -7,7 +7,7 @@ import java.util.List;
 import utils.FileUtils;
 
 public class App {
-	private static String input = "Bai3//input.txt";
+	private static String input = "Bai3//input.txt"; 
 	private static String output = "Bai3//output.txt";
 
 	public static void main(String[] args) {

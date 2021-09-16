@@ -6,7 +6,7 @@ public enum Extension {
 	private final String text;
 
 	private Extension(String text) {
-		this.text = text;
+		this.text = text; 
 	}
 
 	public String getvalue() {

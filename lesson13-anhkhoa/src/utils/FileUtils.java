@@ -21,7 +21,7 @@ public class FileUtils {
 
 	private FileUtils() {
 
-	}
+	} 
 
 	public static void createDirectory(String[] files, String dir) {
 		for (String item : files) {
