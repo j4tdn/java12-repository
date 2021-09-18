@@ -1,8 +1,8 @@
 package thread.core;
 
-import java.util.concurrent.TimeUnit;
 
-import static utils.ThreadUtils.*;
+import static thread_utils.ThreadUtils.*;
+
 
 public class Ex03 {
 	public static void main(String[] args) {

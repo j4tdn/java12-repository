@@ -1,6 +1,6 @@
 package thread.core;
 
-import static utils.ThreadUtils.*;
+import static thread_utils.ThreadUtils.*;
 
 import java.util.concurrent.TimeUnit;
 import static java.util.concurrent.TimeUnit.*;
