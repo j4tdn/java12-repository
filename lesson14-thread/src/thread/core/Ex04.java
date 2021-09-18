@@ -2,7 +2,7 @@ package thread.core;
 
 import java.util.concurrent.TimeUnit;
 
-import static java.util.concurrent.TimeUnit.*;
+import static java.util.concurrent.TimeUnit.SECONDS;
 import static utils.ThreadUtils.*;
 
 public class Ex04 {
@@ -44,6 +44,12 @@ public class Ex04 {
             startThread();
             doTask(time, unit);
             System.out.println(getThreadName() + " tooks " + (System.currentTimeMillis() - start) + "ms");
+        }
+
+        // synchronized method
+        // synchronized
+        public synchronized void demoSync() {
+            System.out.println(getThreadName() + " accessed synchronized method");
         }
     }
 }
