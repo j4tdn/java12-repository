@@ -42,7 +42,15 @@ public class Ex04 {
 			startThread();
 			//prepare data took 2s
 			doTask(time, unit);
+			demoSync();
 			System.out.println( getThreadName() +"tooks: " + (System.currentTimeMillis() - start) + "ms");
+		}
+		
+		//synchronized data
+		//synchronized method
+		public synchronized void demoSync() {
+			System.out.println(getThreadName()+ "acccess sychronized method");
+			System.out.println("end sychronized method");
 		}
 	}
 }
