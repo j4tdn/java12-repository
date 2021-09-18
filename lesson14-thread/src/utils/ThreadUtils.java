@@ -4,12 +4,26 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadUtils {
 	private ThreadUtils() {
+		// TODO Auto-generated constructor stub
 	}
-
+	
 	public static void printCurrentThreadName() {
-		System.out.println(">> thread # " + Thread.currentThread().getName());
+		System.out.println(">> #" + Thread.currentThread().getName());
 	}
-
+	public static void startThread(long time) {
+		System.out.println(Thread.currentThread().getName()+ " is running ..." +time);
+	}
+	public static void startThread() {
+		System.out.println(Thread.currentThread().getName()+ " is running ...");
+	}
+	public static void endThread(long start) {
+		System.out.println("---->"+ Thread.currentThread().getName()+ "tooks" + (System.currentTimeMillis()-start));
+	}
+	public static String getThreadName() {
+		return Thread.currentThread().getName();
+	}
+	
+	//virtual task within a certain time
 	public static void doTask(long time, TimeUnit unit) {
 		try {
 			unit.sleep(time);
@@ -18,12 +32,15 @@ public class ThreadUtils {
 			e.printStackTrace();
 		}
 	}
-
-	public static void join(Thread thread) {
+	
+	
+	public static void join(Thread t) {
 		try {
-			thread.join();
+			t.join();
 		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+	
 }
