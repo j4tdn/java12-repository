@@ -15,7 +15,6 @@ public class App {
 		
 		List<CD> lists = new ArrayList<>(Arrays.asList(cd1, cd2, cd3, cd4, cd5, cd6));
 		
-		CdUtils.add(lists);
-		System.out.println(lists.size());
+		CDUtils.menu(lists);
 	}
 }

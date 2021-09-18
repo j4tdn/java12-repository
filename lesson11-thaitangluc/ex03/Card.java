@@ -1,39 +1,40 @@
 package ex03;
 
-public class Card<T> {
-    public enum Suit {
-        HEARTS, DIAMONDS, CLUBS, SPADES
-    }
+public class Card {
+	private Order order;
+	private Type type;
+	
+	public Card() {
+	}
+	
+	public Card(Order order, Type type) {
+		this.type = type;
+		this.order = order;
+	}
 
-    private Suit suit;
-    private T rank;
+	public Type getType() {
+		return type;
+	}
+	public void setType(Type type) {
+		this.type = type;
+	}
+	public Order getOrder() {
+		return order;
+	}
+	public void setOrder(Order order) {
+		this.order = order;
+	}
 
-    public Card() {
-    }
-
-    public Card(Suit suit, T rank) {
-        this.suit = suit;
-        this.rank = rank;
-    }
-
-    public Suit getSuit() {
-        return suit;
-    }
-
-    public void setSuit(Suit suit) {
-        this.suit = suit;
-    }
-
-    public T getRank() {
-        return rank;
-    }
-
-    public void setRank(T rank) {
-        this.rank = rank;
-    }
-
-    @Override
-    public String toString() {
-        return rank + " of " + suit;
-    }
+	@Override
+	public String toString() {
+		return order + "-" + type;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if(!(obj instanceof Card)) return false;
+		Card that = (Card) obj;
+		return this.order == that.order && this.type == that.type;
+	}
+	
 }
