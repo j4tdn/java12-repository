@@ -12,6 +12,10 @@ public class ThreadUtils {
 		System.out.println(Thread.currentThread().getName()+" is running ...");
 	}
 	
+	public static void endThread(long star) {
+		System.out.println(Thread.currentThread().getName()+" took "+ (System.currentTimeMillis()-star));
+	}
+	
 	//virtual task with certain time
 	public static void doTask(long time, TimeUnit unit) {
 		try {
