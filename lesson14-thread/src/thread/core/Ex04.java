@@ -41,12 +41,17 @@ public class Ex04 {
             this.unit = unit;
         }
         @Override
-        public void run() {
+        public synchronized void run() {
             utils.ThreadUtils.startThread();
             utils.ThreadUtils.doTask(3, TimeUnit.SECONDS);
+            demoSync();
+            System.out.println(utils.ThreadUtils.getThreadName()+"Tooks "+(System.currentTimeMillis() - start) +"ms");
 
-            System.out.println("Tooks "+(System.currentTimeMillis() - start) +"ms");
+        }
 
+        private synchronized void demoSync() {
+            System.out.println(utils.ThreadUtils.getThreadName()+" accessed synchronized method ");
+            System.out.println("end synchronized ");
         }
     }
 
