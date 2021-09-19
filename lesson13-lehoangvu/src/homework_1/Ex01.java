@@ -69,6 +69,8 @@ public class Ex01 {
 
     private static File createDir(String path) {
         File dir = new File(path);
+
+
         dir.mkdirs();
         System.out.println();
         return dir;
