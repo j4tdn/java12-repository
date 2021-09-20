@@ -20,7 +20,7 @@ public class Ex02 {
 		File transactionFile  = FileUtils.create(TRANSACTION_PATH);
 		List<Transaction> transactions = DataUtils.getTransaction();
 		
-		FileUtils.writeLines(traderFile.toPath(), traders, StandardOpenOption.APPEND);
+		FileUtils.writeLines(traderFile.toPath(), traders, StandardOpenOption);
 		FileUtils.open(traderFile);
 	}
 }
