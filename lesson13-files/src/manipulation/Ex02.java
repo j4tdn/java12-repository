@@ -21,7 +21,6 @@ public class Ex02 {
 		List<Transaction> transactions = DataUtils.getTransaction();
 		
 		FileUtils.writeLines(traderFile.toPath(), traders, StandardOpenOption.APPEND);
-		
 		FileUtils.open(traderFile);
 	}
 }

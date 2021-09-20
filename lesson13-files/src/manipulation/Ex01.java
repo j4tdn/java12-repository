@@ -1,6 +1,10 @@
 package manipulation;
 
+import java.awt.Desktop;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import utils.FileUtils;
 
@@ -9,7 +13,11 @@ public class Ex01 {
 	
 	public static void main(String[] args) {
 		File file = new File(path);
-		FileUtils.write(file);
+		
+		// write file
+//		FileUtils.write(file);
+		
+		// read file
 		FileUtils.read(file);
 	}
 }

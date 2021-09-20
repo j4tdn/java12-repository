@@ -2,7 +2,7 @@ package common;
 
 public enum Extension {
 	mp4(".mp4"), 
-	mp3("mp3"), 
+	mp3(".mp3"), 
 	txt(".txt"), 
 	java(".java"), 
 	png(".png");
