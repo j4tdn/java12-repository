@@ -8,9 +8,9 @@ public class Ex04 {
 	private static long start = 0;
 
 	public static void main(String[] args) {
-		Task task1 = new Task(3,TimeUnit.SECONDS);
-		Task task2 = new Task(3,TimeUnit.SECONDS);
-		Task task3 = new Task(3,TimeUnit.SECONDS);
+		Task task1 = new Task(3, TimeUnit.SECONDS);
+		Task task2 = new Task(3, TimeUnit.SECONDS);
+		Task task3 = new Task(3, TimeUnit.SECONDS);
 
 		start = System.currentTimeMillis();
 		Thread t1 = new Thread(task1, "thread1");
@@ -33,7 +33,7 @@ public class Ex04 {
 
 		@Override
 		public void run() {
-			ThreadUtils.startThread();
+			ThreadUtils.startThread(time);
 			ThreadUtils.dotask(time, unit);
 			System.out.println(ThreadUtils.getThreadName() + "Tooks " + (System.currentTimeMillis() - start) + "ms");
 		}
