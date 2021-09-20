@@ -5,6 +5,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 import common.Trader;
+import common.Transaction;
 import utils.DataUtils;
 import utils.FileUtils;
 
@@ -14,9 +15,10 @@ public class Ex02 {
 
 	public static void main(String[] args) {
 		File traderFile = FileUtils.create(TRADER_PATH);
-//		FileUtils.create(TRANSACTION_PATH);
-
 		List<Trader> traders = DataUtils.getTrader();
+		
+		File transactionFile  = FileUtils.create(TRANSACTION_PATH);
+		List<Transaction> transactions = DataUtils.getTransaction();
 		
 		FileUtils.writeLines(traderFile.toPath(), traders, StandardOpenOption.APPEND);
 		
