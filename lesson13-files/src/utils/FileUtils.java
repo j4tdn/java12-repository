@@ -88,7 +88,7 @@ public class FileUtils {
 		return Collections.emptyList();
 	}
 	@SuppressWarnings("unchecked")
-	private static <T> List<T> safeList(Object o){
+	public static <T> List<T> safeList(Object o){
 		return(List<T>) o;
 	}
 	
