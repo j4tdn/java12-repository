@@ -15,18 +15,12 @@ public class StoreUtils {
 	public static Map<Store, BigDecimal> stepOne(List<Store> data) {
 		Map<Store, BigDecimal> expectedSaleInci = new HashMap<>();
 		List<Store> dataSelected = data.stream().filter(store -> store.getSelected()).collect(Collectors.toList());
-		BigDecimal sum = BigDecimal.valueOf(0);
-		BigDecimal count = BigDecimal.valueOf(0);
-		for(Store store : dataSelected) {
-			if(store.getExpectedSales() != null) {
-				sum.add(store.getExpectedSales());
-				count.add(new BigDecimal(1));
-				System.out.println(count);
-			}
-		}
-		System.out.println(sum + " " + count);
-		BigDecimal avg = sum.divide(count);
-		avg.setScale(1, RoundingMode.HALF_UP);
+		Double d = data.stream().filter(store -> store.getExpectedSales() != null).mapToDouble(e -> e.getExpectedSales().doubleValue()).sum();
+		Double count = (double) data.stream().filter(store -> store.getExpectedSales() != null).mapToDouble(e -> e.getExpectedSales().doubleValue()).count();
+		double avg = d/count;
+		
+		BigDecimal avgf = BigDecimal.valueOf(avg);
+		avgf.setScale(1, RoundingMode.HALF_UP);
 		
 		ListIterator<Store> iterator = dataSelected.listIterator();
 		
@@ -39,7 +33,7 @@ public class StoreUtils {
             	}
             	if(store.getReferenceStoreId() == null || referStore.getExpectedSales() == null) {
             		
-            		store.setExpectedSales(avg);
+            		store.setExpectedSales(avgf);
             	}
             }
             
